@@ -1,6 +1,7 @@
 import Layout from '@theme/Layout';
-import Hero from '@site/src/components/Hero/hero';
 import { JSX } from 'react';
+import Hero from '@site/src/components/Hero/hero';
+import Skills from '@site/src/components/Skills/skills';
 
 export default function Home(): JSX.Element {
   return (
@@ -10,9 +11,8 @@ export default function Home(): JSX.Element {
     >
       <main>
         <Hero />
-        {/* Weitere Portfolio-Sektionen kommen hier rein */}
+        <Skills />
         {/* <Projects /> */}
-        {/* <Skills /> */}
         {/* <Contact /> */}
       </main>
     </Layout>

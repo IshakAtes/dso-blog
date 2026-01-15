@@ -1,0 +1,17 @@
+.skillsSection {
+  padding: 0px;
+}
+
+.skillsContainer {
+    height: 100vh;
+    padding: 0px 20px;
+}
+
+.skillsTitle {
+    font-family: 'Quicksand';
+    font-weight: 700;
+    font-weight: Bold;
+    font-size: 64px;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
