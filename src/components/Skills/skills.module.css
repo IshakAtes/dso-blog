@@ -3,8 +3,11 @@
 }
 
 .skillsContainer {
-    height: 100vh;
     padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .skillsTitle {
@@ -14,4 +17,29 @@
     font-size: 64px;
     line-height: 120%;
     letter-spacing: 0%;
+}
+
+.skillCardsContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 48px;
+    padding-bottom: 100px;
+}
+
+.skillCard {
+    width: 370px;
+    height: 200px;
+    border-radius: 30px;
+    background-color: #91C9F31A;
+    padding: 42px 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skillImage {
+    max-width: 80px;
+    max-height: 80px;
 }
