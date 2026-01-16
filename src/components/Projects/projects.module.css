@@ -4,6 +4,11 @@
 
 .projectsTitle {
     text-align: start;
+    font-family: 'Quicksand';
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 120%;
+    letter-spacing: 0%;
 }
 
 .mainContainer {
@@ -13,7 +18,34 @@
 
 .projectsContainer {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.projectsList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    min-width: 260px;
+}
+
+li {
+    list-style: none;
+}
+
+.projectCard {
+    width: 920px;
+    height: 384px;
+    border-radius: 30px;
+    background-color: #2F4563;
+    padding: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
 }
