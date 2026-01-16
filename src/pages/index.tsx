@@ -2,6 +2,7 @@ import Layout from '@theme/Layout';
 import { JSX } from 'react';
 import Hero from '@site/src/components/Hero/hero';
 import Skills from '@site/src/components/Skills/skills';
+import Projects from '@site/src/components/Projects/projects';
 
 export default function Home(): JSX.Element {
   return (
@@ -12,7 +13,7 @@ export default function Home(): JSX.Element {
       <main>
         <Hero />
         <Skills />
-        {/* <Projects /> */}
+        <Projects />
         {/* <Contact /> */}
       </main>
     </Layout>

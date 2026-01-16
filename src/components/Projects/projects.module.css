@@ -1,0 +1,19 @@
+.prjectsSection {
+    padding: 0;
+}
+
+.projectsTitle {
+    text-align: start;
+}
+
+.mainContainer {
+    padding: 100px 20px;
+    background-color: #266AD9;
+}
+
+.projectsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
