@@ -5,46 +5,123 @@ import { useState } from 'react';
 const Projects = () => {
     const projects = [
         {
-            name: 'Baby Tools',
-            image: 'img/projectImages/babyShop.png',
+            name: 'V-Server Setup',
+            image: 'img/projectImages/vServer.png',
             description: 'A web application to help parents track their baby\'s development and milestones.',
             skills: [
-                { skillname: 'GitHub', image: 'img/skillLogos/github.png' },
-                { skillname: 'Django', image: 'img/skillLogos/github.png' },
+                { skillname: 'IT-Security', image: 'img/skillLogos/github.png' },
+                { skillname: 'Shell-Scripting', image: 'img/skillLogos/github.png' },
+                { skillname: 'HTML', image: 'img/skillLogos/github.png' },
+                { skillname: 'CSS', image: 'img/skillLogos/github.png' },
             ],
             links: {
                 documentation: 'https://babytools.docs.example.com',
-                github: 'lorem',
+                github: 'https://github.com/IshakAtes/v-server-setup.git',
+            },
+        },
+        {
+            name: 'Baby Tools Shop',
+            image: 'img/projectImages/babyShop.png',
+            description: 'A web application to help parents track their baby\'s development and milestones.',
+            skills: [
+                { skillname: 'Docker', image: 'img/skillLogos/github.png' },
+                { skillname: 'Django', image: 'img/skillLogos/github.png' },
+                { skillname: 'Shell-Scripting', image: 'img/skillLogos/github.png' },
+                { skillname: 'Python', image: 'img/skillLogos/github.png' },
+            ],
+            links: {
+                documentation: 'https://babytools.docs.example.com',
+                github: 'https://github.com/IshakAtes/baby-tools-shop.git',
             },
         },
         {
             name: 'Truck Signs API',
-            image: 'img/projectLogos/truckSigns.png',
+            image: 'img/projectImages/truckSigns.png',
             description: 'A web application to help parents track their baby\'s development and milestones.',
             skills: [
-                { skillname: 'GitHub', image: 'img/skillLogos/github.png' },
-                { skillname: 'Docker', image: 'img/skillLogos/docker.png' },
-                { skillname: 'PostgreSQL', image: 'img/skillLogos/postgresql.png' },
+                { skillname: 'Docker', image: 'img/skillLogos/github.png' },
+                { skillname: 'Django', image: 'img/skillLogos/github.png' },
+                { skillname: 'Shell-Scripting', image: 'img/skillLogos/github.png' },
+                { skillname: 'Python', image: 'img/skillLogos/github.png' },
             ],
             links: {
                 documentation: 'https://babytools.docs.example.com',
-                github: 'lorem',
+                github: 'https://github.com/IshakAtes/truck_signs_api.git',
             },
         },
         {
             name: 'Juice Shop Meister',
-            image: 'img/projectLogos/juiceShop.png',
+            image: 'img/projectImages/juiceShop.png',
             description: 'A web application to help parents track their baby\'s development and milestones.',
             skills: [
-                { skillname: 'GitHub', image: 'img/skillLogos/github.png' },
-                { skillname: 'Docker', image: 'img/skillLogos/docker.png' },
-                { skillname: 'PostgreSQL', image: 'img/skillLogos/postgresql.png' },
+                { skillname: 'IT-Security', image: 'img/skillLogos/github.png' },
+                { skillname: 'Shell-Scripting', image: 'img/skillLogos/github.png' },
+                { skillname: 'Python', image: 'img/skillLogos/github.png' },
             ],
             links: {
                 documentation: 'https://babytools.docs.example.com',
-                github: 'lorem',
+                github: 'https://github.com/IshakAtes/owasp_juice_shop.git',
             },
-        }
+        },
+        {
+            name: 'Wordpress',
+            image: 'img/projectImages/wordpress.png',
+            description: 'A web application to help parents track their baby\'s development and milestones.',
+            skills: [
+                { skillname: 'Shell-Scripting', image: 'img/skillLogos/github.png' },
+                { skillname: 'Docker', image: 'img/skillLogos/github.png' },
+            ],
+            links: {
+                documentation: 'https://babytools.docs.example.com',
+                github: 'https://github.com/IshakAtes/wordpress_docker.git',
+            },
+        },
+        {
+            name: 'Minecraft-Server',
+            image: 'img/projectImages/minecraft.png',
+            description: 'A web application to help parents track their baby\'s development and milestones.',
+            skills: [
+                { skillname: 'Docker', image: 'img/skillLogos/github.png' },
+                { skillname: 'Shell-Scripting', image: 'img/skillLogos/github.png' },
+                { skillname: 'YAML', image: 'img/skillLogos/github.png' },
+            ],
+            links: {
+                documentation: 'https://babytools.docs.example.com',
+                github: 'https://github.com/IshakAtes/minecraft-server.git',
+            },
+        },
+        {
+            name: 'Conduit Deployment',
+            image: 'img/projectImages/conduit.png',
+            description: 'A web application to help parents track their baby\'s development and milestones.',
+            skills: [
+                { skillname: 'Docker', image: 'img/skillLogos/github.png' },
+                { skillname: 'Shell-Scripting', image: 'img/skillLogos/github.png' },
+                { skillname: 'YAML', image: 'img/skillLogos/github.png' },
+                { skillname: 'CI/CD', image: 'img/skillLogos/github.png' },
+            ],
+            links: {
+                documentation: 'https://babytools.docs.example.com',
+                github: 'https://github.com/IshakAtes/conduit-container.git',
+            },
+        },
+        {
+            name: 'Docusaurus-Portfolio',
+            image: 'img/undraw_docusaurus_tree.svg',
+            description: 'A web application to help parents track their baby\'s development and milestones.',
+            skills: [
+                { skillname: 'Docker', image: 'img/skillLogos/github.png' },
+                { skillname: 'Shell-Scripting', image: 'img/skillLogos/github.png' },
+                { skillname: 'YAML', image: 'img/skillLogos/github.png' },
+                { skillname: 'CI/CD', image: 'img/skillLogos/github.png' },
+                { skillname: 'HTML', image: 'img/skillLogos/github.png' },
+                { skillname: 'CSS', image: 'img/skillLogos/github.png' },
+            ],
+            links: {
+                documentation: 'https://babytools.docs.example.com',
+                github: 'https://github.com/IshakAtes/dso-blog.git',
+            },
+        },
     ];
 
     // STATE: aktuell ausgewähltes Projekt
