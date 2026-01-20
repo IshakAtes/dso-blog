@@ -9,10 +9,10 @@ const Projects = () => {
             image: 'img/projectImages/vServer.png',
             description: 'A web application to help parents track their baby\'s development and milestones.',
             skills: [
-                { skillname: 'IT-Security', image: 'img/skillLogos/github.png' },
-                { skillname: 'Shell-Scripting', image: 'img/skillLogos/github.png' },
-                { skillname: 'HTML', image: 'img/skillLogos/github.png' },
-                { skillname: 'CSS', image: 'img/skillLogos/github.png' },
+                { skillname: 'IT-Security', image: 'img/card-skill-icons/security.png' },
+                { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
+                { skillname: 'HTML', image: 'img/card-skill-icons/html.png' },
+                { skillname: 'CSS', image: 'img/card-skill-icons/css.png' },
             ],
             links: {
                 documentation: 'https://babytools.docs.example.com',
@@ -24,10 +24,10 @@ const Projects = () => {
             image: 'img/projectImages/babyShop.png',
             description: 'A web application to help parents track their baby\'s development and milestones.',
             skills: [
-                { skillname: 'Docker', image: 'img/skillLogos/github.png' },
-                { skillname: 'Django', image: 'img/skillLogos/github.png' },
-                { skillname: 'Shell-Scripting', image: 'img/skillLogos/github.png' },
-                { skillname: 'Python', image: 'img/skillLogos/github.png' },
+                { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
+                { skillname: 'Django', image: 'img/card-skill-icons/django.png' },
+                { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
+                { skillname: 'Python', image: 'img/card-skill-icons/python.png' },
             ],
             links: {
                 documentation: 'https://babytools.docs.example.com',
@@ -39,10 +39,10 @@ const Projects = () => {
             image: 'img/projectImages/truckSigns.png',
             description: 'A web application to help parents track their baby\'s development and milestones.',
             skills: [
-                { skillname: 'Docker', image: 'img/skillLogos/github.png' },
-                { skillname: 'Django', image: 'img/skillLogos/github.png' },
-                { skillname: 'Shell-Scripting', image: 'img/skillLogos/github.png' },
-                { skillname: 'Python', image: 'img/skillLogos/github.png' },
+                { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
+                { skillname: 'Django', image: 'img/card-skill-icons/django.png' },
+                { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
+                { skillname: 'Python', image: 'img/card-skill-icons/python.png' },
             ],
             links: {
                 documentation: 'https://babytools.docs.example.com',
@@ -54,9 +54,9 @@ const Projects = () => {
             image: 'img/projectImages/juiceShop.png',
             description: 'A web application to help parents track their baby\'s development and milestones.',
             skills: [
-                { skillname: 'IT-Security', image: 'img/skillLogos/github.png' },
-                { skillname: 'Shell-Scripting', image: 'img/skillLogos/github.png' },
-                { skillname: 'Python', image: 'img/skillLogos/github.png' },
+                { skillname: 'IT-Security', image: 'img/card-skill-icons/security.png' },
+                { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
+                { skillname: 'Python', image: 'img/card-skill-icons/python.png' },
             ],
             links: {
                 documentation: 'https://babytools.docs.example.com',
@@ -68,8 +68,8 @@ const Projects = () => {
             image: 'img/projectImages/wordpress.png',
             description: 'A web application to help parents track their baby\'s development and milestones.',
             skills: [
-                { skillname: 'Shell-Scripting', image: 'img/skillLogos/github.png' },
-                { skillname: 'Docker', image: 'img/skillLogos/github.png' },
+                { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
+                { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
             ],
             links: {
                 documentation: 'https://babytools.docs.example.com',
@@ -81,9 +81,9 @@ const Projects = () => {
             image: 'img/projectImages/minecraft.png',
             description: 'A web application to help parents track their baby\'s development and milestones.',
             skills: [
-                { skillname: 'Docker', image: 'img/skillLogos/github.png' },
-                { skillname: 'Shell-Scripting', image: 'img/skillLogos/github.png' },
-                { skillname: 'YAML', image: 'img/skillLogos/github.png' },
+                { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
+                { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
+                { skillname: 'YAML', image: 'img/card-skill-icons/yaml.png' },
             ],
             links: {
                 documentation: 'https://babytools.docs.example.com',
@@ -95,10 +95,10 @@ const Projects = () => {
             image: 'img/projectImages/conduit.png',
             description: 'A web application to help parents track their baby\'s development and milestones.',
             skills: [
-                { skillname: 'Docker', image: 'img/skillLogos/github.png' },
-                { skillname: 'Shell-Scripting', image: 'img/skillLogos/github.png' },
-                { skillname: 'YAML', image: 'img/skillLogos/github.png' },
-                { skillname: 'CI/CD', image: 'img/skillLogos/github.png' },
+                { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
+                { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
+                { skillname: 'YAML', image: 'img/card-skill-icons/yaml.png' },
+                { skillname: 'CI/CD', image: 'img/card-skill-icons/cicd.png' },
             ],
             links: {
                 documentation: 'https://babytools.docs.example.com',
@@ -110,12 +110,12 @@ const Projects = () => {
             image: 'img/undraw_docusaurus_tree.svg',
             description: 'A web application to help parents track their baby\'s development and milestones.',
             skills: [
-                { skillname: 'Docker', image: 'img/skillLogos/github.png' },
-                { skillname: 'Shell-Scripting', image: 'img/skillLogos/github.png' },
-                { skillname: 'YAML', image: 'img/skillLogos/github.png' },
-                { skillname: 'CI/CD', image: 'img/skillLogos/github.png' },
-                { skillname: 'HTML', image: 'img/skillLogos/github.png' },
-                { skillname: 'CSS', image: 'img/skillLogos/github.png' },
+                { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
+                { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
+                { skillname: 'YAML', image: 'img/card-skill-icons/yaml.png' },
+                { skillname: 'CI/CD', image: 'img/card-skill-icons/cicd.png' },
+                { skillname: 'HTML', image: 'img/card-skill-icons/html.png' },
+                { skillname: 'CSS', image: 'img/card-skill-icons/css.png' },
             ],
             links: {
                 documentation: 'https://babytools.docs.example.com',

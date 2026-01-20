@@ -35,6 +35,11 @@ ul {
 
 li {
     list-style: none;
+    cursor: pointer;
+}
+
+li:hover {
+    color: #262E34;
 }
 
 .projectCard {
@@ -48,4 +53,29 @@ li {
     align-items: center;
     justify-content: space-between;
     gap: 32px;
+}
+
+.skillContainer {
+    display: flex;
+    align-items: center;
+}
+
+.skillCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 6px;
+    gap: 4px;
+    background-color: #fff;
+    margin-right: 4px;
+}
+
+.skillCard span {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #262E34;
 }
