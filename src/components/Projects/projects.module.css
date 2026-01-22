@@ -17,11 +17,11 @@
 
 .projectsContainer {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
 }
 
-.projectsList {
+.projectList {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,7 +43,6 @@ li:hover {
 
 .projectCard {
     width: 920px;
-    height: 384px;
     border-radius: 30px;
     background-color: #2F4563;
     padding: 32px;
@@ -73,7 +72,7 @@ li:hover {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .contentContainer {
@@ -129,12 +128,11 @@ li:hover {
 .btn2 {
     font-weight: 600;
     font-size: 20px;
-    line-height: 120%;
+    line-height: 160%;
     background-color: #266AD9;
     color: #fff;
     border: none;
     padding: 14px 20px;
-    gap: 10px;
     border-radius: 30px;
     cursor: pointer;
     text-decoration-line: none;
@@ -149,7 +147,9 @@ li:hover {
 }
 
 .btn3 {
-    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 160%;
     opacity: 1;
     border-radius: 30px;
     padding: 14px 20px;

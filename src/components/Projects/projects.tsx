@@ -7,7 +7,7 @@ const Projects = () => {
         {
             name: 'V-Server Setup',
             image: 'img/projectImages/vServer.png',
-            description: 'A web application to help parents track their baby\'s development and milestones.',
+            description: 'Setup of a personal cloud-based virtual server as a secure and stable foundation for deploying and operating applications. The server was fully configured and intentionally prepared for running containerized applications using Docker.',
             skills: [
                 { skillname: 'IT-Security', image: 'img/card-skill-icons/security.png' },
                 { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
@@ -22,7 +22,7 @@ const Projects = () => {
         {
             name: 'Baby Tools Shop',
             image: 'img/projectImages/babyShop.png',
-            description: 'A web application to help parents track their baby\'s development and milestones.',
+            description: 'Containerization of a simple e-commerce application for baby products with a Django backend to enable isolated, reproducible, and scalable operation. The project focuses on running and managing the backend components within a containerized environment and understanding the operational benefits of container-based architectures.',
             skills: [
                 { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
                 { skillname: 'Django', image: 'img/card-skill-icons/django.png' },
@@ -37,7 +37,7 @@ const Projects = () => {
         {
             name: 'Truck Signs API',
             image: 'img/projectImages/truckSigns.png',
-            description: 'A web application to help parents track their baby\'s development and milestones.',
+            description: 'Containerization of a Django-based REST API with an integrated database to ensure reproducible, isolated, and secure operation. The project focuses on configuring containerized server components, enabling communication between API and database containers, and managing application configuration in a containerized environment.',
             skills: [
                 { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
                 { skillname: 'Django', image: 'img/card-skill-icons/django.png' },
@@ -52,7 +52,7 @@ const Projects = () => {
         {
             name: 'Juice Shop Meister',
             image: 'img/projectImages/juiceShop.png',
-            description: 'A web application to help parents track their baby\'s development and milestones.',
+            description: 'Authorized penetration testing of the intentionally vulnerable OWASP Juice Shop application, focusing on common web vulnerabilities such as cross-site scripting, broken access control, and improper input validation. The project aims to apply offensive security techniques in practice and translate them into concrete defensive measures for securing modern web applications.',
             skills: [
                 { skillname: 'IT-Security', image: 'img/card-skill-icons/security.png' },
                 { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
@@ -66,7 +66,7 @@ const Projects = () => {
         {
             name: 'Wordpress',
             image: 'img/projectImages/wordpress.png',
-            description: 'A web application to help parents track their baby\'s development and milestones.',
+            description: 'Containerization and deployment of a personal WordPress website on a private server, including automated setup of the database and admin account. The project focuses on reproducible, declarative configuration, secure operation, and efficient management of containerized applications.',
             skills: [
                 { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
                 { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
@@ -79,7 +79,7 @@ const Projects = () => {
         {
             name: 'Minecraft-Server',
             image: 'img/projectImages/minecraft.png',
-            description: 'A web application to help parents track their baby\'s development and milestones.',
+            description: 'Containerization and deployment of a dedicated Minecraft server on a cloud VM, including persistent storage of game worlds and configurable server settings. The project focuses on reproducible deployment, flexible configuration via environment variables, and monitoring and testing of the running container environment.',
             skills: [
                 { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
                 { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
@@ -94,7 +94,7 @@ const Projects = () => {
         {
             name: 'Conduit Deployment',
             image: 'img/projectImages/conduit.png',
-            description: 'A web application to help parents track their baby\'s development and milestones.',
+            description: 'Containerization and deployment of the full-stack Conduit application (Angular frontend, Django REST backend) on a personal server. The project includes both manual container setup and a fully automated CI/CD workflow using GitHub Actions, which builds, signs, pushes images to the registry, and deploys them automatically on the server. Key focus areas were security, reproducible deployment, and handling of secrets for managing sensitive data.',
             skills: [
                 { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
                 { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
@@ -109,7 +109,7 @@ const Projects = () => {
         // {
         //     name: 'Docusaurus-Portfolio',
         //     image: 'img/undraw_docusaurus_tree.svg',
-        //     description: 'A web application to help parents track their baby\'s development and milestones.',
+        //     description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         //     skills: [
         //         { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
         //         { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
