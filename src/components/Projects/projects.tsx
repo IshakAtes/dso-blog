@@ -83,6 +83,7 @@ const Projects = () => {
             skills: [
                 { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
                 { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
+                { skillname: 'IT-Security', image: 'img/card-skill-icons/security.png' },
                 { skillname: 'YAML', image: 'img/card-skill-icons/yaml.png' },
             ],
             links: {
@@ -105,23 +106,23 @@ const Projects = () => {
                 github: 'https://github.com/IshakAtes/conduit-container.git',
             },
         },
-        {
-            name: 'Docusaurus-Portfolio',
-            image: 'img/undraw_docusaurus_tree.svg',
-            description: 'A web application to help parents track their baby\'s development and milestones.',
-            skills: [
-                { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
-                { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
-                { skillname: 'YAML', image: 'img/card-skill-icons/yaml.png' },
-                { skillname: 'CI/CD', image: 'img/card-skill-icons/cicd.png' },
-                { skillname: 'HTML', image: 'img/card-skill-icons/html.png' },
-                { skillname: 'CSS', image: 'img/card-skill-icons/css.png' },
-            ],
-            links: {
-                documentation: 'https://babytools.docs.example.com',
-                github: 'https://github.com/IshakAtes/dso-blog.git',
-            },
-        },
+        // {
+        //     name: 'Docusaurus-Portfolio',
+        //     image: 'img/undraw_docusaurus_tree.svg',
+        //     description: 'A web application to help parents track their baby\'s development and milestones.',
+        //     skills: [
+        //         { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
+        //         { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
+        //         { skillname: 'YAML', image: 'img/card-skill-icons/yaml.png' },
+        //         { skillname: 'CI/CD', image: 'img/card-skill-icons/cicd.png' },
+        //         { skillname: 'HTML', image: 'img/card-skill-icons/html.png' },
+        //         { skillname: 'CSS', image: 'img/card-skill-icons/css.png' },
+        //     ],
+        //     links: {
+        //         documentation: 'https://babytools.docs.example.com',
+        //         github: 'https://github.com/IshakAtes/dso-blog.git',
+        //     },
+        // },
     ];
 
     // STATE: aktuell ausgewähltes Projekt
@@ -151,16 +152,8 @@ const Projects = () => {
                     </div>
                     <div className={styles.projectCardsContainer}>
                         <div className={styles.projectCard}>
-                            <div className={styles.leftCt}>
-
-                                <h3>{selectedProject.name}</h3>
-                                <img
-                                    src={selectedProject.image}
-                                    alt={selectedProject.name}
-                                />
-
-                            </div>
-                            <div className={styles.rightCt}>
+                            <div className={styles.headerContainer}>
+                                <h3 className={styles.name}>{selectedProject.name}</h3>
                                 <div className={styles.skillContainer}>
                                     {selectedProject.skills.map((skill, index) => (
                                         <div className={styles.skillCard} key={index}>
@@ -169,16 +162,26 @@ const Projects = () => {
                                         </div>
                                     ))}
                                 </div>
-                                <span>{selectedProject.description}</span>
-                                <div>
-                                    <a href={selectedProject.links.documentation} rel="noopener noreferrer">
-                                        Documentation
-                                    </a>
-                                    <a href={selectedProject.links.github} rel="noopener noreferrer">
-                                        GitHub
-                                    </a>
+                            </div>
+
+                            <div className={styles.bodyContainer}>
+                                <img
+                                    src={selectedProject.image}
+                                    alt={selectedProject.name}
+                                />
+                                <div className={styles.contentContainer}>
+                                    <span>{selectedProject.description}</span>
+                                    <div className={styles.buttonContainer}>
+                                        <a href={selectedProject.links.documentation} className={styles.btn2} rel="noopener noreferrer">
+                                            Documentation
+                                        </a>
+                                        <a href={selectedProject.links.github} className={styles.btn3} rel="noopener noreferrer">
+                                            GitHub
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

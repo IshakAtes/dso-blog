@@ -25,7 +25,6 @@
 }
 
 .greetText {
-    font-family: 'Quicksand';
     font-weight: 400;
     font-style: 'Regular';
     line-height: 120%;
@@ -34,7 +33,6 @@
 }
 
 .role {
-  font-family: 'Quicksand';
   font-weight: 500;
   font-style: 'Medium';
   font-size: 32px;
@@ -42,7 +40,6 @@
 }
 
 .aboutMe {
-  font-family: 'Quicksand';
   font-weight: 400;
   font-size: 22px;
   line-height: 120%;
@@ -50,7 +47,6 @@
 }
 
 .btn1 {
-  font-family: 'Quicksand';
   font-weight: 600;
   font-size: 20px;
   line-height: 120%;
