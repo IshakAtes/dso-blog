@@ -15,7 +15,7 @@ const Projects = () => {
                 { skillname: 'CSS', image: 'img/card-skill-icons/css.png' },
             ],
             links: {
-                documentation: 'https://babytools.docs.example.com',
+                documentation: 'docs/projects/vserver-setup',
                 github: 'https://github.com/IshakAtes/v-server-setup.git',
             },
         },
