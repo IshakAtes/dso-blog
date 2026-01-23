@@ -16,7 +16,7 @@ import GithubLinkAdmonition from '@site/src/components/GithubLinkAdmonition';
 />
 
 
-## Quickstart ⚡️
+## ⚡Quickstart
 If you're in a hurry to see the project live, follow these minimal steps:
 1. Clone the repository:
 ``` bash

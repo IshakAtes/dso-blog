@@ -59,7 +59,7 @@ const Projects = () => {
                 { skillname: 'Python', image: 'img/card-skill-icons/python.png' },
             ],
             links: {
-                documentation: 'https://babytools.docs.example.com',
+                documentation: 'docs/projects/owasp_juice_shop',
                 github: 'https://github.com/IshakAtes/owasp_juice_shop.git',
             },
         },
@@ -72,7 +72,7 @@ const Projects = () => {
                 { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
             ],
             links: {
-                documentation: 'https://babytools.docs.example.com',
+                documentation: 'docs/projects/wordpress',
                 github: 'https://github.com/IshakAtes/wordpress_docker.git',
             },
         },
@@ -87,7 +87,7 @@ const Projects = () => {
                 { skillname: 'YAML', image: 'img/card-skill-icons/yaml.png' },
             ],
             links: {
-                documentation: 'https://babytools.docs.example.com',
+                documentation: 'docs/projects/minecraft-server',
                 github: 'https://github.com/IshakAtes/minecraft-server.git',
             },
         },
@@ -102,7 +102,7 @@ const Projects = () => {
                 { skillname: 'CI/CD', image: 'img/card-skill-icons/cicd.png' },
             ],
             links: {
-                documentation: 'https://babytools.docs.example.com',
+                documentation: 'docs/projects/conduit-ci-cd',
                 github: 'https://github.com/IshakAtes/conduit-container.git',
             },
         },

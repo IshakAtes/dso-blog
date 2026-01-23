@@ -10,7 +10,6 @@ This guide walks you through setting up a virtual server, configuring SSH keys, 
 Guide:  
 [Download the PDF Checklist](https://github.com/IshakAtes/v-server-setup/blob/main/Git%20%2B%20VServer%20Checkliste.pdf)
 
-<!--INSERT YOUR TABLE OF CONTENTS HERE -->
 
 import GithubLinkAdmonition from '@site/src/components/GithubLinkAdmonition';
 
