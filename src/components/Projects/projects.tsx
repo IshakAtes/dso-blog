@@ -30,7 +30,7 @@ const Projects = () => {
                 { skillname: 'Python', image: 'img/card-skill-icons/python.png' },
             ],
             links: {
-                documentation: 'https://babytools.docs.example.com',
+                documentation: 'docs/projects/baby-tools-shop',
                 github: 'https://github.com/IshakAtes/baby-tools-shop.git',
             },
         },
@@ -45,7 +45,7 @@ const Projects = () => {
                 { skillname: 'Python', image: 'img/card-skill-icons/python.png' },
             ],
             links: {
-                documentation: 'https://babytools.docs.example.com',
+                documentation: 'docs/projects/truck-signs-api',
                 github: 'https://github.com/IshakAtes/truck_signs_api.git',
             },
         },
