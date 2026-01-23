@@ -11,7 +11,7 @@ const Skills = () => {
     { name: 'Container', image: 'img/skillLogos/docker.png' },
     { name: 'CI/CD with GitHub Actions', image: 'img/skillLogos/GitHubActions.png' },
     { name: 'IT Security', image: 'img/skillLogos/security.png' },
-    { name: 'Kali Linux', image: 'img/skillLogos/kaliLinux.png' },
+    { name: 'Linux', image: 'img/card-skill-icons/linuxLogo.png' },
   ];
 
   return (

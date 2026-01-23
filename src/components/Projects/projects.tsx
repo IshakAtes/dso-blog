@@ -57,6 +57,7 @@ const Projects = () => {
                 { skillname: 'IT-Security', image: 'img/card-skill-icons/security.png' },
                 { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
                 { skillname: 'Python', image: 'img/card-skill-icons/python.png' },
+                { skillname: 'Kali-Linux', image: 'img/skillLogos/kaliLinux.png' },
             ],
             links: {
                 documentation: 'docs/projects/owasp_juice_shop',
