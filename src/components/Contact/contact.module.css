@@ -1,0 +1,67 @@
+section {
+    padding: 100px 20px;
+    background-color: #262E34;
+}
+
+.firstRow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contactTitle {
+    font-weight: 700;
+    font-size: 64px;
+}
+
+.firstRow span {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.secondRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contactDescription {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: justify;
+    max-width: 700px;
+}
+
+.contactMethods {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contactMethods a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-decoration-style: solid;
+    text-decoration-thickness: 0%;
+    text-decoration-skip-ink: auto;
+    color: #FFFFFF
+}
+
+.contactMethods a:hover {
+    filter: brightness(1.5);
+}

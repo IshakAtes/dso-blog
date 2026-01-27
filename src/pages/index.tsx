@@ -4,6 +4,7 @@ import Hero from '@site/src/components/Hero/hero';
 import Skills from '@site/src/components/Skills/skills';
 import Projects from '@site/src/components/Projects/projects';
 import Contact from '@site/src/components/Contact/contact';
+import Footer from '@site/src/components/Footer/footer';
 
 export default function Home(): JSX.Element {
   return (
@@ -16,6 +17,7 @@ export default function Home(): JSX.Element {
         <Skills />
         <Projects />
         <Contact />
+        <Footer />
       </main>
     </Layout>
   );
