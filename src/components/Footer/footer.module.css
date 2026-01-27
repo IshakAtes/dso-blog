@@ -1,0 +1,45 @@
+* {
+    scroll-behavior: smooth;
+}
+
+footer {
+    background-color: #262E34;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.goUp {
+    width: 40px;
+    height: 90px;
+    background-image: url("/img/goUp.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: background-image 0.2s ease-in-out, transform 0.2s ease;
+}
+
+.goUp:hover {
+  background-image: url("/img/goUpHover.png");
+  transform: translateY(-4px);
+}
+
+
+.footerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footerContent a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footerContent a:hover {
+    text-decoration: underline;
+}
