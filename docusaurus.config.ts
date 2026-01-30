@@ -11,7 +11,7 @@ const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
 const config: Config = {
   title: 'DSO Live Demo Docs',
   tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon/favicon.ico',
 
   // Set the production url of your site here
   url: process.env.DEPLOYMENT_URL ?? "https://github.com/IshakAtes",
@@ -72,7 +72,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'AI',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -98,8 +98,8 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/guides/intro',
+              label: 'Projects',
+              to: '/docs/projects/overview',
             },
           ],
         },
@@ -107,16 +107,12 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/ishak-ates/',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'X',
+              href: 'https://x.com/IshakFeuer',
             },
           ],
         },
@@ -125,7 +121,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/IshakAtes',
             },
             ...(blogEnabled ? [{
               label: 'Blog',

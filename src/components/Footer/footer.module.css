@@ -2,7 +2,7 @@
     scroll-behavior: smooth;
 }
 
-footer {
+.footerSection {
     background-color: #262E34;
     height: 50vh;
     display: flex;

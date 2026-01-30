@@ -11,7 +11,7 @@ export default function Footer() {
         };
 
     return (
-        <footer className={styles.footer}>
+        <section className={styles.footerSection}>
             <div
                 className={styles.goUp}
                 onClick={scrollToTop}
@@ -23,6 +23,6 @@ export default function Footer() {
                 <Link to="/legal">Legal notice</Link>
             </div>
 
-        </footer>
+        </section>
     );
 }

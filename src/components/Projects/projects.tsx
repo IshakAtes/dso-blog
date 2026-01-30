@@ -5,7 +5,7 @@ import { useState } from 'react';
 const Projects = () => {
     const projects = [
         {
-            name: 'V-Server Setup',
+            name: 'V-Server',
             image: 'img/projectImages/vServer.png',
             description: 'Setup of a personal cloud-based virtual server as a secure and stable foundation for deploying and operating applications. The server was fully configured and intentionally prepared for running containerized applications using Docker.',
             skills: [
@@ -15,7 +15,7 @@ const Projects = () => {
                 { skillname: 'CSS', image: 'img/card-skill-icons/css.png' },
             ],
             links: {
-                documentation: 'docs/projects/vserver-setup',
+                documentation: 'docs/projects/v-server',
                 github: 'https://github.com/IshakAtes/v-server-setup.git',
             },
         },
@@ -140,12 +140,12 @@ const Projects = () => {
                 <h2 className={styles.projectsTitle}>My project highlights</h2>
                 <div className={styles.projectsContainer}>
                     <div className={styles.projectList}>
-                        <ul>
+                        <ul className={styles.projectul}>
                             {projects.map((project, index) => (
                                 <li
                                     key={index}
                                     onClick={() => handleProjectClick(index)}
-                                    className={project.name === selectedProject.name ? styles.activeProject : ''}>
+                                    className={`${styles.listElement} ${project.name === selectedProject.name ? styles.activeProject : ''}`}>
                                     {index+1}. {project.name}
                                 </li>
                             ))}

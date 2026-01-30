@@ -1,9 +1,9 @@
-section {
+.contactSection {
     padding: 100px 20px;
     background-color: #262E34;
 }
 
-.firstRow{
+.firstRow {
     display: flex;
     justify-content: space-between;
     align-items: center;

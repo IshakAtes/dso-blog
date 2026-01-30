@@ -1,7 +1,3 @@
-.prjectsSection {
-    padding: 0;
-}
-
 .projectsTitle {
     text-align: start;
     font-weight: 700;
@@ -28,16 +24,16 @@
     align-items: center;
 }
 
-ul {
+.projectul {
     min-width: 260px;
 }
 
-li {
+.listElement {
     list-style: none;
     cursor: pointer;
 }
 
-li:hover {
+.listElement:hover {
     color: #262E34;
 }
 
