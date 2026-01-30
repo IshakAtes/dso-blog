@@ -75,7 +75,7 @@ const config: Config = {
       title: 'AI',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/ishak_logo.png',
       },
       items: [
         {
