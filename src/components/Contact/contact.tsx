@@ -3,7 +3,7 @@ import styles from './contact.module.css';
 export default function Contact() {
     return (
 
-        <section className={styles.contactSection}>
+        <section id="contact-section" className={styles.contactSection}>
 
             <div className={styles.contactContainer}>
                 <div className={styles.firstRow}>

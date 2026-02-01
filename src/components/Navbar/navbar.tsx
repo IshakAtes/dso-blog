@@ -5,7 +5,7 @@ export function Nav(): JSX.Element {
   return (
     <section className={styles.navbar}>
         <div className={styles.logo}>
-            <img src="" alt="" />
+            <img src="img/ishak_logo.png" alt="" />
             <span>AI</span>
         </div>
         <ul className={styles.navItems}>
@@ -16,10 +16,10 @@ export function Nav(): JSX.Element {
                 <a href="blog">Blog</a>
             </li> */}
             <li>
-                <a href="contact">Contact</a>
+                <a href="#contact-section">Contact</a>
             </li>
             <li>
-                <a href="https://github.com/IshakAtes/dso-blog.git">GitHub</a>
+                <a target='blank' href="https://github.com/IshakAtes/dso-blog.git">GitHub</a>
             </li>
         </ul>
     </section>
