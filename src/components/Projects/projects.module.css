@@ -1,3 +1,7 @@
+.projectsSection {
+    background-color: #266AD9;
+}
+
 .projectsTitle {
     text-align: start;
     font-weight: 700;
@@ -8,7 +12,6 @@
 
 .mainContainer {
     padding: 100px 20px;
-    background-color: #266AD9;
 }
 
 .projectsContainer {

@@ -1,4 +1,5 @@
 import styles from './skills.module.css';
+import './../../css/custom.css';
 
 const Skills = () => {
   const skills = [
@@ -15,7 +16,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className={styles.skillsSection}>
+    <section className={`${styles.skillsSection} globalPadding`}>
 
         <div className={styles.skillsContainer}>
 

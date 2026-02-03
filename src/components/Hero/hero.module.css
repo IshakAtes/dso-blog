@@ -1,14 +1,13 @@
 .hero {
-  padding: 0px;
+  background-color: #266AD9;
 }
 
 .container {
-  background-color: #266AD9;
+  
   height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px;
 }
 
 .heroTextContainer {

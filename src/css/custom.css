@@ -31,5 +31,10 @@
 
 
 .navbar__logo {
-    height:2.6rem;
+  height:2.6rem;
+}
+
+.globalPadding {
+  padding-left: 100px;
+  padding-right: 100px;
 }

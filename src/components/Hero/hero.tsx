@@ -1,8 +1,9 @@
 import styles from './Hero.module.css';
+import './../../css/custom.css';
 
 const Hero = () => {
   return (
-    <section className={styles.hero}>
+    <section className={`${styles.hero} globalPadding`}>
       <div className={styles.container}>
         <div className={styles.heroTextContainer}>
             <span className={styles.greetText}>Hey there. 👋 I am</span>

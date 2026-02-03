@@ -1,9 +1,10 @@
 import styles from './contact.module.css';
+import './../../css/custom.css';
 
 export default function Contact() {
     return (
 
-        <section id="contact-section" className={styles.contactSection}>
+        <section id="contact-section" className={`${styles.contactSection} globalPadding`}>
 
             <div className={styles.contactContainer}>
                 <div className={styles.firstRow}>

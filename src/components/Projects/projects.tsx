@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './projects.module.css';
 import { useState } from 'react';
+import './../../css/custom.css';
 
 const Projects = () => {
     const projects = [
@@ -135,7 +136,7 @@ const Projects = () => {
     };
 
     return (
-        <section className={styles.projectsSection}>
+        <section className={`${styles.projectsSection} globalPadding`}>
             <div className={styles.mainContainer}>
                 <h2 className={styles.projectsTitle}>My project highlights</h2>
                 <div className={styles.projectsContainer}>
