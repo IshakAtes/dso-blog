@@ -41,3 +41,19 @@
     /* max-width: 80px; */
     max-height: 80px;
 }
+
+
+
+/* Media-Queries */
+@media (max-width: 1200px) {
+    .skillsContainer {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .skillsTitle{
+        margin-top: 60px;
+        margin-bottom: 48px;
+    }
+
+}
