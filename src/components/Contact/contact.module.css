@@ -17,10 +17,8 @@
 
 .firstRow span {
     font-weight: 500;
-    font-style: Medium;
     font-size: 24px;
     line-height: 120%;
-    letter-spacing: 0%;
 }
 
 .secondRow {
@@ -53,7 +51,6 @@
     align-items: center;
     gap: 16px;
     font-weight: 500;
-    font-style: Medium;
     font-size: 18px;
     line-height: 120%;
     letter-spacing: 0%;
@@ -66,4 +63,35 @@
 .contactMethods a:hover {
     filter: brightness(1.5);
     text-decoration: underline;
+}
+
+.contactMethods > span {
+    display: none;
+}
+
+
+
+/* Media-Queries */
+@media (max-width: 1200px) {
+    .firstRow span {
+        display: none;
+    }
+
+    .contactMethods > span {
+        display: block;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 120%;
+    }
+
+    .secondRow {
+        justify-content: center;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .firstRow {
+        justify-content: center;
+    }
+
 }

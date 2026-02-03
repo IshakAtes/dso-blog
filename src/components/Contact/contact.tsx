@@ -17,6 +17,7 @@ export default function Contact() {
                         <p>I am open to full-time on-site, hybrid, or remote positions within international or EU-based teams. Feel free to reach out to discuss potential collaboration.</p>
                     </div>
                     <div className={styles.contactMethods}>
+                        <span>Looking forward to hearing from you!</span>
                         <a href="mailto:contact@ishakates.com">
                             <img src="img/mailIcon.png" alt="" />
                             <span>contact@ishakates.com</span>
