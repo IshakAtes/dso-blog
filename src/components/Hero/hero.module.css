@@ -3,7 +3,6 @@
 }
 
 .container {
-  
   height: 100vh;
   display: flex;
   justify-content: space-between;
@@ -12,6 +11,8 @@
 
 .heroTextContainer {
     max-width: 640px;
+    display: flex;
+    flex-direction: column;
 }
 
 .heroImageContainer {
@@ -25,31 +26,27 @@
 
 .greetText {
     font-weight: 400;
-    font-style: 'Regular';
     line-height: 120%;
-    letter-spacing: 0%;
     font-size: 32px;
 }
 
 .role {
   font-weight: 500;
-  font-style: 'Medium';
   font-size: 32px;
-  letter-spacing: 0%;
+  margin-bottom: 40px;
 }
 
 .aboutMe {
   font-weight: 400;
   font-size: 22px;
   line-height: 120%;
-  letter-spacing: 0px;
 }
 
 .btn1 {
+  width: fit-content;
   font-weight: 600;
   font-size: 20px;
   line-height: 120%;
-  letter-spacing: 0%;
   background-color: white;
   color: #266AD9;
   border: none;
@@ -65,4 +62,36 @@
 
 .highlight {
   color: var(--ifm-color-primary);
+}
+
+.heroImageMobile {
+  display: none;
+}
+
+
+
+/* Media-Queries */
+@media (max-width: 1200px) {
+  .heroImageContainer {
+    display: none;
+  }
+
+  .heroImageMobile {
+    display: block;
+    border-radius: 30px;
+    max-width: 300px;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .container {
+    height: unset;
+    justify-content: center;
+  }
+
+  .heroTextContainer {
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
 }

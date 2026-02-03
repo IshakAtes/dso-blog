@@ -38,3 +38,13 @@
   padding-left: 100px;
   padding-right: 100px;
 }
+
+
+/* Media-Queries */
+@media (max-width: 1200px) {
+  .globalPadding {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+}
