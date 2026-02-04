@@ -1,14 +1,16 @@
+.sectionBackground {
+    background-color: #266AD9;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding: 10px 20px; */
     height: 60px;
     width: 100%;
     z-index: 10;
     top: 0;
     position: sticky;
-    background-color: #266AD9;
 }
 
 .logo {
@@ -48,4 +50,87 @@
 
 .navItems li a {
     color: #fff;
+}
+
+.mobileNav {
+    display: none;
+}
+
+
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+/* Burger Button Styling */
+.burger {
+  display: none; /* Versteckt auf Desktop */
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: 0.3s;
+}
+
+
+
+/* Media-Queries */
+@media (max-width: 800px) {
+    .navbar {
+        display: none;
+    }
+
+    .mobileNav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        width: 100%;
+        z-index: 10;
+        top: 0;
+        position: sticky;
+    }
+
+    .burger {
+    display: flex;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 100%; /* Direkt unter der Navbar */
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 2rem;
+    gap: 1.5rem;
+    text-align: center;
+    /* Verstecken, wenn nicht offen */
+    transform: translateY(-150%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .navLinks.open {
+    transform: translateY(0);
+  }
+
+  /* Animation des Burgers zum 'X' */
+  .active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
 }

@@ -48,3 +48,11 @@
   }
 
 }
+
+@media (max-width: 800px) {
+  .globalPadding {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+}
