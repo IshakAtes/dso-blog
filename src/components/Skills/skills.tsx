@@ -16,7 +16,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className={`${styles.skillsSection} globalPadding`}>
+    <section id="skills-section" className={`${styles.skillsSection} globalPadding`}>
 
         <div className={styles.skillsContainer}>
 
