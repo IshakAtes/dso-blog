@@ -224,3 +224,10 @@
     }
 
 }
+
+@media (max-width: 800px) {
+    .projectCard {
+        left: -32px;
+    }
+
+}

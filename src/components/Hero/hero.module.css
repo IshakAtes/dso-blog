@@ -130,3 +130,24 @@
   }
 
 }
+
+@media (max-width: 800px) {
+  .greetText {
+      font-size: 24px;
+  }
+
+  .heroName {
+      font-size: 48px;
+  }
+
+  .role {
+    font-size: 24px;
+    margin-bottom: 0px;
+  }
+
+  .aboutMe {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+}
