@@ -228,6 +228,53 @@
 @media (max-width: 800px) {
     .projectCard {
         left: -32px;
+        gap: 16px;
+    }
+
+    .projectsTitle {
+        font-weight: Bold;
+        font-size: 48px;
+    }
+
+    .headerContainer {
+        flex-direction: column;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .skillContainer {
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-top: 18px;
+    }
+
+    .bodyContainer {
+        flex-direction: column;
+    }
+
+    .bodyContainer img {
+        margin-bottom: 16px;
+    }
+
+    .contentContainer {
+        width: 100%;
+        align-items: center;
+    }
+
+    .buttonContainer {
+        gap: 10px;
+    }
+
+    .btn2 {
+        line-height: 120%;
+        padding: 12px 16px;
+    }
+
+    .btn3 {
+        line-height: 120%;
+        padding: 12px 16px;
     }
 
 }
