@@ -51,9 +51,22 @@
         justify-content: center;
     }
 
-    .skillsTitle{
+    .skillsTitle {
         margin-top: 60px;
         margin-bottom: 48px;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+    .skillsTitle {
+        font-size: 40px;
+    }
+
+    .skillCard {
+        width: 100%;
+        max-width: 370px;
     }
 
 }
