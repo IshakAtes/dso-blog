@@ -95,3 +95,29 @@
     }
 
 }
+
+
+@media (max-width: 800px) {
+    .contactTitle {
+        font-size: 32px;
+    }
+
+    .contactDescription {
+        text-align: left;
+    }
+
+    .contactDescription p {
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .contactMethods span {
+        font-size: 18px;
+    }
+
+    .contactMethods a {
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+}
