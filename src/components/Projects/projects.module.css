@@ -204,6 +204,8 @@
         right: 0;
         position: relative;
         padding: 32px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
     .bodyContainer img {
@@ -227,8 +229,10 @@
 
 @media (max-width: 800px) {
     .projectCard {
-        left: -32px;
+        left: -24px;
         gap: 16px;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     .projectsTitle {
