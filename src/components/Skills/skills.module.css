@@ -25,21 +25,97 @@
     padding-bottom: 100px;
 }
 
+.skillImage {
+    max-height: 80px;
+    margin-bottom: 10px;
+}
+
 .skillCard {
     width: 370px;
     height: 200px;
     border-radius: 30px;
     background-color: #91C9F31A;
-    padding: 42px 72px;
+    padding: 20px; /* Padding etwas reduziert, damit Text mehr Platz hat */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Wichtig für die Positionierung der Ebenen */
+    overflow: hidden;   /* Damit nichts über den Rand hinausragt */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skillCard:hover {
+    transform: scale(1.05);
+    background-color: #79B8FF80;
+}
+
+/* Vorderseite */
+.skillFront {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: opacity 0.3s ease;
+    opacity: 1;
 }
 
-.skillImage {
-    /* max-width: 80px; */
-    max-height: 80px;
+/* Rückseite */
+.skillBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 25px; /* Genug Platz zum Rand */
+    display: flex;
+    align-items: center; /* Zentriert die Liste vertikal */
+    justify-content: flex-start; /* Liste fängt links an */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: #79B8FF80; /* Optional: Hintergrundfarbe beim Hover etwas kräftiger */
+    border-radius: 30px;
+}
+
+.skillListTitle {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 24px;
+    color: #fff;
+}
+
+.skillList {
+    list-style: none; /* Wir bauen eigene Bullets für mehr Kontrolle */
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.skillList li {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+    color: #fff; /* Textfarbe auf der Rückseite */
+}
+
+/* Eigene Bullet-Points (die Striche/Punkte vor dem Text) */
+.skillList li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Der Hover-Effekt: Front ausblenden, Back einblenden */
+.skillCard:hover .skillFront {
+    opacity: 0;
+}
+
+.skillCard:hover .skillBack {
+    opacity: 1;
 }
 
 
