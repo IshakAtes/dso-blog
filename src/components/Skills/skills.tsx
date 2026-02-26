@@ -10,7 +10,7 @@ const Skills = () => {
         'User-friendly navigation menus',
         'Responsive web design',
         'Contact forms and login pages',
-        'Transitions, animations and hover effects'
+        'Transitions, animations and hover effects',
       ]
     },
     {
@@ -20,62 +20,87 @@ const Skills = () => {
         'User-friendly navigation menus',
         'Responsive web design',
         'Contact forms and login pages',
-        'Transitions, animations and hover effects'
+        'Transitions, animations and hover effects',
       ]
     },
     {
       name: 'Static site generator',
       image: 'img/skillLogos/docusaur.png',
       content: [
-        'Static site generation with Docusaurus'
+        'Static site generation with Docusaurus',
+        'search functionality',
+        'static website and customization',
+        'tags, categories, and RSS feeds',
       ]
     },
     { name: 'Python',
       image: 'img/skillLogos/python.png',
       content: [
-        'Automation and scripting with Python'
+        'Build APIs',
+        'spam filtering, recommendation systems',
+        'automate software testing',
+        'using libraries like Tkinter, PyQt, or Kivy',
       ]
     },
     {
       name: 'Shell scripting',
       image: 'img/skillLogos/shellScripting.png',
       content: [
-        'System administration and automation with shell scripts'
+        'System administration and automation with shell scripts',
+        'Adding new users and setting their permissions.',
+        'Performing calculations or running statistical analysis on data.',
+        'Conditional statements, loops, functions',
       ]
     },
     {
       name: 'Yaml',
       image: 'img/skillLogos/yaml.png',
       content: [
-        'Configuration management with Yaml files'
+        'Configuration management with Yaml files',
+        'A Kubernetes deployment',
+        'Store settings like database connections',
+        'Environment-specific variables',
+        'Complex data structures represent lists and maps',
       ]
     },
     {
       name: 'Container',
       image: 'img/skillLogos/docker.png',
       content: [
-      'Containerization and deployment with Docker'
+      'Containerization and deployment with Docker',
+      'CI/CD pipelines',
+      'automate building, testing, deploying applications.',
+      'build microservices-based applications',
       ]
     },
     {
       name: 'CI/CD with GitHub Actions',
       image: 'img/skillLogos/GitHubActions.png',
       content: [
-        'Continuous integration and deployment with GitHub Actions'
+        'Automated builds and tests',
+        'Pre-built actions for common tasks',
+        'Push, pull request, or schedule triggers',
+        'Automated deployments',
       ]
     },
     {
       name: 'IT Security',
       image: 'img/skillLogos/security.png',
       content: [
-        'Security best practices and vulnerability management'
+        'Security best practices and vulnerability management',
+        'Simulate attacks and identify vulnerabilities',
+        'Setting up multi-factor authentication',
+        'Login security',
+        'Implement authentication and authorization mechanisms',
       ]
     },
     {
       name: 'Linux',
       image: 'img/card-skill-icons/linuxLogo.png',
       content: [
-        'Linux system administration and troubleshooting'
+        'Linux system administration and troubleshooting',
+        'Command-line proficiency',
+        'Shell scripting for automation',
       ]
     },
   ];
@@ -90,13 +115,12 @@ const Skills = () => {
             <div className={styles.skillCardsContainer}>
                 {skills.map((skill, index) => (
                   <div key={index} className={styles.skillCard}>
-                    {/* Vorderseite */}
+
                     <div className={styles.skillFront}>
                       <img className={styles.skillImage} src={skill.image} alt={skill.name} />
                       <span>{skill.name}</span>
                     </div>
 
-                    {/* Rückseite mit Liste */}
                     <div className={styles.skillBack}>
                       <ul className={styles.skillList}>
                         <span className={styles.skillListTitle}>How I used this skills</span>
