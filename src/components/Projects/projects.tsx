@@ -177,7 +177,7 @@ const Projects = () => {
                                         <a href={selectedProject.links.documentation} className={styles.btn2} rel="noopener noreferrer">
                                             Documentation
                                         </a>
-                                        <a href={selectedProject.links.github} className={styles.btn3} rel="noopener noreferrer">
+                                        <a href={selectedProject.links.github} className={styles.btn3} target='blank' rel="noopener noreferrer">
                                             GitHub
                                         </a>
                                     </div>

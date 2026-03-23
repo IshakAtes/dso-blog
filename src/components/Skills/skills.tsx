@@ -89,7 +89,6 @@ const Skills = () => {
       content: [
         'Security best practices and vulnerability management',
         'Simulate attacks and identify vulnerabilities',
-        'Setting up multi-factor authentication',
         'Login security',
         'Implement authentication and authorization mechanisms',
       ]
