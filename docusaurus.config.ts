@@ -45,6 +45,10 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl:
             'https://github.com/IshakAtes/dso-blog',
+          exclude: [
+            'knowledge-base/**', // Schließt den ganzen Ordner aus
+            '**/_*.{js,jsx,ts,tsx,md,mdx}', // Standard-Excludes beibehalten
+          ],
         },
         blog: blogEnabled ? 
           {
