@@ -1,0 +1,285 @@
+.projectsSection {
+    background-color: #266AD9;
+}
+
+.projectsTitle {
+    text-align: start;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.mainContainer {
+    padding: 100px 0px;
+}
+
+.projectsContainer {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.projectList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectul {
+    min-width: 260px;
+}
+
+.listElement {
+    list-style: none;
+    cursor: pointer;
+}
+
+.listElement:hover {
+    color: #262E34;
+}
+
+.projectCard {
+    width: 920px;
+    border-radius: 30px;
+    background-color: #2F4563;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.headerContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 40px;
+    line-height: 120%;
+    margin-bottom: 0;
+}
+
+.bodyContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contentContainer {
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 24px;
+}
+
+.contentContainer span {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 125%;
+}
+
+.skillContainer {
+    display: flex;
+    align-items: center;
+}
+
+.skillCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 6px;
+    gap: 4px;
+    background-color: #fff;
+    margin-right: 4px;
+}
+
+.skillCard img {
+    max-width: 42px;
+    max-height: 42px;
+    min-height: 32px;;
+}
+
+.skillCard span {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #262E34;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 16px;
+}
+
+.btn2 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 160%;
+    background-color: #266AD9;
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration-line: none;
+    text-decoration: none;
+}
+
+.btn2:hover {
+    background-color: #5696FF;
+    color: #fff;
+    text-decoration-line: none;
+    text-decoration: none;
+}
+
+.btn3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 160%;
+    opacity: 1;
+    border-radius: 30px;
+    padding: 14px 20px;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.btn3:hover {
+    color: #FFF;
+    background-color: #FFFFFF29;
+    text-decoration-line: none;
+    text-decoration: none;
+}
+
+
+
+
+/* Media-Queries */
+@media (max-width: 1400px) {
+    .projectCard {
+        width: 768px;
+        padding: 24px;
+    }
+
+    .projectul {
+        min-width: 220px;
+        padding-left: 0;
+    }
+
+    .bodyContainer img {
+        max-width: unset;
+        width: 260px;
+    }
+
+    .contentContainer {
+        width: 420px;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .projectsContainer {
+        flex-direction: column;
+    }
+
+    .projectCardsContainer {
+        position: relative;
+    }
+
+    .projectCard {
+        width: 100vw;
+        left: -54px;
+        right: 0;
+        position: relative;
+        padding: 32px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .bodyContainer img {
+        max-width: 100%;
+        width: unset;
+    }
+
+    .projectsSection {
+        overflow: hidden;
+    }
+
+}
+
+@media (max-width: 860px) {
+    .bodyContainer img {
+        max-width: unset;
+        width: 260px;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .projectCard {
+        left: -24px;
+        gap: 16px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .projectsTitle {
+        font-weight: Bold;
+        font-size: 48px;
+    }
+
+    .headerContainer {
+        flex-direction: column;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .skillContainer {
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-top: 18px;
+    }
+
+    .bodyContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bodyContainer img {
+        margin-bottom: 16px;
+    }
+
+    .contentContainer {
+        width: 100%;
+        align-items: center;
+    }
+
+    .buttonContainer {
+        gap: 10px;
+    }
+
+    .btn2 {
+        line-height: 120%;
+        padding: 12px 16px;
+    }
+
+    .btn3 {
+        line-height: 120%;
+        padding: 12px 16px;
+    }
+
+}
