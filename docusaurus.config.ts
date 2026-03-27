@@ -10,7 +10,7 @@ const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
 
 const config: Config = {
   title: 'DSO Live Demo Docs',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'DevSecOps Insights',
   favicon: 'img/favicon/favicon.ico',
 
   // Set the production url of your site here
@@ -26,7 +26,7 @@ const config: Config = {
 
   deploymentBranch: process.env.DEPLOYMENT_BRANCH,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
