@@ -4,7 +4,7 @@ WORKDIR /app
 
 ARG BLOG_ENABLED=false
 ARG DEPLOYMENT_URL="https://ishak-ates.github.io"
-ARG DEPLOYMENT_BRANCH="main"
+ARG DEPLOYMENT_BRANCH="dev"
 ARG GITHUB_ORG="ishak-ates"
 ARG GITHUB_PROJECT="dso-blog"
 
