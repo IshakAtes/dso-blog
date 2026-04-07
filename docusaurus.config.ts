@@ -14,10 +14,10 @@ const config: Config = {
   favicon: 'img/favicon/favicon.ico',
 
   // Set the production url of your site here
-  url: process.env.DEPLOYMENT_URL ?? "https://github.com/IshakAtes",
+  url: process.env.DEPLOYMENT_URL ?? "https://ishakates.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: process.env.BASE_URL ?? "/",
+  baseUrl: process.env.BASE_URL ?? "/dso-blog/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
