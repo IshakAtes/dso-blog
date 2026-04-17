@@ -54,19 +54,6 @@ export function Nav(): JSX.Element {
                 <li><a href="#skills-section" onClick={() => setIsOpen(false)}>Skills</a></li>
                 <li><a href="#contact-section" onClick={() => setIsOpen(false)}>Contact</a></li>
             </ul>
-
-
-            {/* <ul className={styles.navItems}>
-                <li>
-                    <a href="docs/projects/overview">Docs</a>
-                </li>
-                <li>
-                    <a href="#contact-section">Contact</a>
-                </li>
-                <li>
-                    <a target='blank' href="https://github.com/IshakAtes/dso-blog.git">GitHub</a>
-                </li>
-            </ul> */}
         </div>
     </section>
   );

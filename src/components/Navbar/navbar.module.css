@@ -116,7 +116,6 @@
 
     .logo span:hover {
         color: #333;
-        ;
     }
 
     .burger {
@@ -171,11 +170,8 @@
         text-decoration: underline #333;
     }
 
-    .logo:hover {
-
-        span {
-            color: #333;
-            text-decoration: underline #333;
-        }
+    .logo:hover span {
+        color: #333;
+        text-decoration: underline #333;
     }
 }

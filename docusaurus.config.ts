@@ -157,7 +157,7 @@ const config: Config = {
 };
 
 
-if (blogEnabled) {
+if (blogEnabled && config.themeConfig) {
   (config.themeConfig.navbar as any).items.push({to: '/blog', label: 'Blog', position: 'left'});
 }
 

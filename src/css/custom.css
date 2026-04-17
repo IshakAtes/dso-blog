@@ -46,13 +46,11 @@
     padding-left: 50px;
     padding-right: 50px;
   }
-
 }
 
 @media (max-width: 800px) {
   .globalPadding {
-    padding-left: 24px;
+    padding-left: 240px;
     padding-right: 24px;
   }
-
 }
