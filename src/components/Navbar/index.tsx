@@ -18,17 +18,26 @@ export function Nav(): JSX.Element {
             </a>
             <ul className={styles.navItems}>
                 <li>
-                    <a href="docs/projects/overview">Docs</a>
+                    <a href="#hero-section">About me</a>
                 </li>
+                {/* <li>
+                    <a href="docs/projects/overview">Docs</a>
+                </li> */}
                 {/* <li>
                     <a href="blog">Blog</a>
                 </li> */}
                 <li>
-                    <a href="#contact-section">Contact</a>
+                    <a href="#skills-section">My Skills</a>
                 </li>
                 <li>
-                    <a target='blank' href="https://github.com/IshakAtes/dso-blog.git">GitHub</a>
+                    <a href="#projects-section">My projects</a>
                 </li>
+                <li>
+                    <a href="#contact-section">Contact</a>
+                </li>
+                {/* <li>
+                    <a target='blank' href="https://github.com/IshakAtes/dso-blog.git">GitHub</a>
+                </li> */}
             </ul>
         </div>
 

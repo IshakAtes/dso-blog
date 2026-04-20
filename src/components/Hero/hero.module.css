@@ -22,6 +22,7 @@
 .heroName {
     font-size: 88px;
     font-weight: 700;
+    color: #fff;
 }
 
 .greetText {
@@ -29,6 +30,7 @@
     line-height: 120%;
     font-size: 32px;
     display: flex;
+    color: #fff;
 }
 
 .wave {
@@ -59,12 +61,14 @@
   font-weight: 500;
   font-size: 32px;
   margin-bottom: 40px;
+  color: #fff;
 }
 
 .aboutMe {
   font-weight: 400;
   font-size: 22px;
   line-height: 120%;
+  color: #fff;
 }
 
 .btn1 {

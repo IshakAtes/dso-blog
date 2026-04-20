@@ -1,6 +1,7 @@
-/* .skillsSection {
-  padding: 0px 20px;
-} */
+.skillsSection {
+  /* padding: 0px 20px; */
+  background-color: #1b1b1d;
+}
 
 .skillsContainer {
     display: flex;
@@ -15,6 +16,7 @@
     font-size: 64px;
     line-height: 120%;
     letter-spacing: 0%;
+    color: #fff;
 }
 
 .skillCardsContainer {
@@ -35,12 +37,12 @@
     height: 200px;
     border-radius: 30px;
     background-color: #91C9F31A;
-    padding: 20px; /* Padding etwas reduziert, damit Text mehr Platz hat */
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative; /* Wichtig für die Positionierung der Ebenen */
-    overflow: hidden;   /* Damit nichts über den Rand hinausragt */
+    overflow: hidden;
     transition: all 0.3s ease;
     cursor: pointer;
 }
@@ -58,6 +60,11 @@
     justify-content: center;
     transition: opacity 0.3s ease;
     opacity: 1;
+}
+
+.skillFront span {
+    color: #fff;
+    font-weight: bold;
 }
 
 /* Rückseite */

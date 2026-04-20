@@ -19,11 +19,11 @@ export default function Contact() {
                     <div className={styles.contactMethods}>
                         <span>Looking forward to hearing from you!</span>
                         <a href="mailto:contact@ishakates.com">
-                            <img src="img/mailIcon.png" alt="" />
+                            <img src="img/mailIcon.png" alt="mail Icon" />
                             <span>contact@ishakates.com</span>
                         </a>
                         <a href="https://www.linkedin.com/in/ishak-ates/" target="_blank" rel="noopener noreferrer">
-                            <img src="img/linkedinIcon.png" alt="" />
+                            <img src="img/linkedInIcon.png" alt="linkedIn Icon" />
                             <span>My LinkedIn</span>
                         </a>
                     </div>

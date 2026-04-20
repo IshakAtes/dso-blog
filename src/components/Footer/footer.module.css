@@ -35,6 +35,10 @@
     flex-direction: column;
 }
 
+.footerContent span {
+    color: #fff;
+}
+
 .footerContent a {
     text-decoration: none;
     color: #fff;

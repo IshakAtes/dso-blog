@@ -13,11 +13,13 @@
 .contactTitle {
     font-weight: 700;
     font-size: 64px;
+    color: #fff;
 }
 
 .firstRow span {
     font-weight: 500;
     font-size: 24px;
+    color: #fff;
     line-height: 120%;
 }
 
@@ -34,6 +36,7 @@
     letter-spacing: 0%;
     text-align: justify;
     max-width: 700px;
+    color: #fff;
 }
 
 .contactMethods {
@@ -42,6 +45,10 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 24px;
+}
+
+.contactMethods span {
+    color: #fff;
 }
 
 .contactMethods a {

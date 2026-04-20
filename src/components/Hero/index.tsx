@@ -3,7 +3,7 @@ import './../../css/custom.css';
 
 const Hero = () => {
   return (
-    <section className={`${styles.hero} globalPadding`}>
+    <section id="hero-section" className={`${styles.hero} globalPadding`}>
       <div className={styles.container}>
         <div className={styles.heroTextContainer}>
             <span className={styles.greetText}>Hey there. <span className={styles.wave}>👋</span> I am</span>

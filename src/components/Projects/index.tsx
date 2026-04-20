@@ -131,12 +131,12 @@ const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(projects[0]);
 
     // FUNKTION: wird bei Klick auf ein Listenelement aufgerufen
-    const handleProjectClick = (index) => {
+    const handleProjectClick = (index: number) => {
         setSelectedProject(projects[index]);
     };
 
     return (
-        <section className={`${styles.projectsSection} globalPadding`}>
+        <section id="projects-section" className={`${styles.projectsSection} globalPadding`}>
             <div className={styles.mainContainer}>
                 <h2 className={styles.projectsTitle}>My project highlights</h2>
                 <div className={styles.projectsContainer}>
