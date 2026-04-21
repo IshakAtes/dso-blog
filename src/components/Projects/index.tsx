@@ -25,7 +25,7 @@ const Projects = () => {
             image: 'img/projectImages/babyShop.png',
             description: 'Containerization of a simple e-commerce application for baby products with a Django backend to enable isolated, reproducible, and scalable operation. The project focuses on running and managing the backend components within a containerized environment and understanding the operational benefits of container-based architectures.',
             skills: [
-                { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
+                { skillname: 'Docker', image: 'img/card-skill-icons/docker-icon.png' },
                 { skillname: 'Django', image: 'img/card-skill-icons/django.png' },
                 { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
                 { skillname: 'Python', image: 'img/card-skill-icons/python.png' },
@@ -40,7 +40,7 @@ const Projects = () => {
             image: 'img/projectImages/truckSigns.png',
             description: 'Containerization of a Django-based REST API with an integrated database to ensure reproducible, isolated, and secure operation. The project focuses on configuring containerized server components, enabling communication between API and database containers, and managing application configuration in a containerized environment.',
             skills: [
-                { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
+                { skillname: 'Docker', image: 'img/card-skill-icons/docker-icon.png' },
                 { skillname: 'Django', image: 'img/card-skill-icons/django.png' },
                 { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
                 { skillname: 'Python', image: 'img/card-skill-icons/python.png' },
@@ -71,7 +71,7 @@ const Projects = () => {
             description: 'Containerization and deployment of a personal WordPress website on a private server, including automated setup of the database and admin account. The project focuses on reproducible, declarative configuration, secure operation, and efficient management of containerized applications.',
             skills: [
                 { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
-                { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
+                { skillname: 'Docker', image: 'img/card-skill-icons/docker-icon.png' },
             ],
             links: {
                 documentation: 'docs/projects/wordpress',
@@ -83,7 +83,7 @@ const Projects = () => {
             image: 'img/projectImages/minecraft.png',
             description: 'Containerization and deployment of a dedicated Minecraft server on a cloud VM, including persistent storage of game worlds and configurable server settings. The project focuses on reproducible deployment, flexible configuration via environment variables, and monitoring and testing of the running container environment.',
             skills: [
-                { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
+                { skillname: 'Docker', image: 'img/card-skill-icons/docker-icon.png' },
                 { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
                 { skillname: 'IT-Security', image: 'img/card-skill-icons/security.png' },
                 { skillname: 'YAML', image: 'img/card-skill-icons/yaml.png' },
@@ -98,7 +98,7 @@ const Projects = () => {
             image: 'img/projectImages/conduit.png',
             description: 'Containerization and deployment of the full-stack Conduit application (Angular frontend, Django REST backend) on a personal server. The project includes both manual container setup and a fully automated CI/CD workflow using GitHub Actions, which builds, signs, pushes images to the registry, and deploys them automatically on the server. Key focus areas were security, reproducible deployment, and handling of secrets for managing sensitive data.',
             skills: [
-                { skillname: 'Docker', image: 'img/card-skill-icons/docker.png' },
+                { skillname: 'Docker', image: 'img/card-skill-icons/docker-icon.png' },
                 { skillname: 'Shell-Scripting', image: 'img/card-skill-icons/shell.png' },
                 { skillname: 'YAML', image: 'img/card-skill-icons/yaml.png' },
                 { skillname: 'CI/CD', image: 'img/card-skill-icons/cicd.png' },
