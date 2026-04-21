@@ -59,8 +59,9 @@ export function Nav(): JSX.Element {
 
             {/* Die eigentliche Navigationsliste */}
             <ul className={`${styles.navLinks} ${isOpen ? styles.open : ''}`}>
-                <li><a href="/dso-blog/" onClick={() => setIsOpen(false)}>Home</a></li>
-                <li><a href="#skills-section" onClick={() => setIsOpen(false)}>Skills</a></li>
+                <li><a href="#hero-section" onClick={() => setIsOpen(false)}>About me</a></li>
+                <li><a href="#skills-section" onClick={() => setIsOpen(false)}>My Skills</a></li>
+                <li><a href="#projects-section" onClick={() => setIsOpen(false)}>My Projects</a></li>
                 <li><a href="#contact-section" onClick={() => setIsOpen(false)}>Contact</a></li>
             </ul>
         </div>
