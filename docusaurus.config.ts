@@ -9,7 +9,7 @@ dotenvconfig();
 const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
 
 const config: Config = {
-  title: 'DSO Live Demo Docs',
+  title: 'DSO Portfolio & Blog',
   tagline: 'DevSecOps Insights',
   favicon: 'img/favicon/favicon.ico',
 
