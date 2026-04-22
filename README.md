@@ -9,15 +9,18 @@ This repository hosts a developer blog built with Docusaurus. It includes tools 
 ## Table of Contents
 
 - [My Developer Blog](#my-developer-blog)
-  - [Repository Description](#repository-description)
-  - [Table of Contents](#table-of-contents)
-  - [Quickstart](#quickstart)
-    - [Prerequisites](#prerequisites)
-  - [Repository Structure](#repository-structure)
-  - [Deployment](#deployment)
-    - [Deploy to Github Pages](#deploy-to-github-pages)
-    - [Deploying using NGINX](#deploying-using-nginx)
-    - [Contributing](#contributing)
+   - [Repository Description](#repository-description)
+   - [Table of Contents](#table-of-contents)
+   - [Quickstart](#quickstart)
+      - [Prerequisites](#prerequisites)
+   - [Usage](#usage)
+      - [Development](#development)
+      - [Customization](#customization)
+   - [Repository Structure](#repository-structure)
+   - [Deployment](#deployment)
+      - [Deploy to Github Pages](#deploy-to-github-pages)
+      - [Deploying using NGINX](#deploying-using-nginx)
+      - [Contributing](#contributing)
 
 ## Quickstart
 
@@ -58,6 +61,24 @@ This repository hosts a developer blog built with Docusaurus. It includes tools 
    ```
 
 For detailed information about deploying this Docusaurus project, refer to the [Deployment](#deployment) section below.
+
+## Usage
+
+### Development
+You can modify the content of the website by editing files in the following directories:
+
+- `docs/` for documentation pages
+- `blog/` for blog posts
+- `src/` for custom React components
+
+Changes are automatically reflected during development when running:
+``` shell
+   pnpm start
+```
+
+### Customization
+- Modify `docusaurus.config.ts` to adjust site configuration
+- Update `sidebars.ts` to change documentation structure
 
 ## Repository Structure
 
