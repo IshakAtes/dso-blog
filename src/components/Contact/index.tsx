@@ -4,9 +4,9 @@ import './../../css/custom.css';
 export default function Contact() {
     return (
 
-        <section id="contact-section" className={`${styles.contactSection} globalPadding`}>
+        <section id="contact-section" className={styles.contactSection}>
 
-            <div className={styles.contactContainer}>
+            <div className={`${styles.contactContainer} globalPadding`}>
                 <div className={styles.firstRow}>
                     <h2 className={styles.contactTitle}>Contact me</h2>
                     <span>Looking forward to hearing from you!</span>

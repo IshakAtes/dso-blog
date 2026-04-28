@@ -10,8 +10,8 @@ export function Nav(): JSX.Element {
         setIsOpen(!isOpen);
     };
   return (
-    <section className={`${styles.sectionBackground} globalPadding`}>
-        <div className={styles.navbar}>
+    <section className={styles.sectionBackground}>
+        <div className={`${styles.navbar} globalPadding`}>
             <a href="./" className={styles.logo}>
                 <img src="img/ishak_logo.png" alt="" />
                 <span>AI</span>

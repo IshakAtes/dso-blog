@@ -1,5 +1,6 @@
 import Layout from '@theme/Layout';
 import { JSX } from 'react';
+import styles from './index.module.css';
 import { Nav } from '@site/src/components/Navbar';
 import Hero from '@site/src/components/Hero';
 import Skills from '@site/src/components/Skills';

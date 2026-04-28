@@ -105,12 +105,9 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills-section" className={`${styles.skillsSection} globalPadding`}>
-
-        <div className={styles.skillsContainer}>
-
+    <section id="skills-section" className={styles.skillsSection}>
+        <div className={`${styles.skillsContainer} globalPadding`}>
             <h2 className={styles.skillsTitle}>My skills</h2>
-
             <div className={styles.skillCardsContainer}>
                 {skills.map((skill, index) => (
                   <div key={index} className={styles.skillCard}>
@@ -131,9 +128,7 @@ const Skills = () => {
                   </div>
                 ))}
             </div>
-
         </div>
-
     </section>
   );
 }

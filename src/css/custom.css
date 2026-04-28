@@ -35,12 +35,26 @@
 }
 
 .globalPadding {
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 240px;
+  padding-right: 240px;
 }
 
 
 /* Media-Queries */
+@media (max-width: 1800px) {
+  .globalPadding {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .globalPadding {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
 @media (max-width: 1200px) {
   .globalPadding {
     padding-left: 50px;

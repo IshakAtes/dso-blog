@@ -12,7 +12,8 @@
 }
 
 .mainContainer {
-    padding: 100px 0px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .projectsContainer {
@@ -172,6 +173,17 @@
 
 
 /* Media-Queries */
+@media (min-width: 2000px) {
+  .mainContainer {
+    width: 100%;
+    max-width: 2000px;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+  }
+}
+
 @media (max-width: 1400px) {
     .projectCard {
         width: 768px;

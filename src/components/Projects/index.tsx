@@ -136,8 +136,8 @@ const Projects = () => {
     };
 
     return (
-        <section id="projects-section" className={`${styles.projectsSection} globalPadding`}>
-            <div className={styles.mainContainer}>
+        <section id="projects-section" className={styles.projectsSection}>
+            <div className={`${styles.mainContainer} globalPadding`}>
                 <h2 className={styles.projectsTitle}>My project highlights</h2>
                 <div className={styles.projectsContainer}>
                     <div className={styles.projectList}>
