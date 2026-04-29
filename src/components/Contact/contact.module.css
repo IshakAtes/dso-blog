@@ -90,8 +90,19 @@
   }
 }
 
+@media (max-width: 1400px) {
+    .contactDescription {
+        width: 500px;
+    }
+
+}
+
 
 @media (max-width: 1200px) {
+    .contactDescription {
+        width: unset;
+    }
+
     .firstRow span {
         display: none;
     }

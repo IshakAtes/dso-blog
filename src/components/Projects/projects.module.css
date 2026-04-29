@@ -19,19 +19,20 @@
 .projectsContainer {
     display: flex;
     align-items: baseline;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .projectList {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding-right: 24px;
+    align-items: flex-start;
 }
 
-.project ul {
+.projectul {
     min-width: 260px;
+    padding-left: 0;
+    padding-right: 24px;
 }
 
 .listElement {
@@ -44,16 +45,19 @@
     color: #262E34;
 }
 
+.projectCardsContainer {
+    width: 80%
+}
+
 .projectCard {
-    width: 920px;
     border-radius: 30px;
     background-color: #2F4563;
-    padding: 32px;
+    padding: 60px 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    gap: 40px;
 }
 
 .headerContainer {
@@ -79,8 +83,12 @@
     align-items: flex-start;
 }
 
+.bodyContainer img {
+    width: 340px;
+}
+
 .contentContainer {
-    width: 460px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -184,24 +192,41 @@
   }
 }
 
+@media (max-width: 1800px) {
+    .projectCard {
+        border-radius: 30px;
+        background-color: #2F4563;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .contentContainer {
+        width: 420px;
+    }
+
+    .bodyContainer img {
+        width: unset;
+    }
+}
+
 @media (max-width: 1400px) {
     .projectCard {
-        width: 768px;
         padding: 24px;
     }
 
     .projectul {
-        min-width: 220px;
+        min-width: 200px;
         padding-left: 0;
+        padding-right: 0;
     }
 
     .bodyContainer img {
         max-width: unset;
         width: 260px;
-    }
-
-    .contentContainer {
-        width: 420px;
     }
 
 }
