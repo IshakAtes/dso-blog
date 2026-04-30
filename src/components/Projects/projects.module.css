@@ -45,6 +45,11 @@
     color: #262E34;
 }
 
+.activeProject {
+    color: #262E34;
+    font-weight: bold;
+}
+
 .projectCardsContainer {
     width: 80%
 }

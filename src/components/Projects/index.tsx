@@ -146,8 +146,10 @@ const Projects = () => {
                                 <li
                                     key={index}
                                     onClick={() => handleProjectClick(index)}
-                                    className={`${styles.listElement} ${project.name === selectedProject.name ? styles.activeProject : ''}`}>
-                                    {index+1}. {project.name}
+                                    className={`${styles.listElement} ${
+                                        project.name === selectedProject.name ? styles.activeProject : ''
+                                    }`}>
+                                    {index + 1}. {project.name}
                                 </li>
                             ))}
                         </ul>
