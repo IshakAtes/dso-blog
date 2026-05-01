@@ -47,7 +47,7 @@
 
 .activeProject {
     color: #262E34;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .projectCardsContainer {

@@ -13,7 +13,8 @@ export default function Contact() {
                 </div>
                 <div className={styles.secondRow}>
                     <div className={styles.contactDescription}>
-                        <p>I am seeking Mid-Level DevSecOps opportunities with a focus on containerized applications, secure infrastructure, and automated CI/CD pipelines. I contribute to teams by designing reproducible deployment workflows, improving system reliability, and integrating security best practices throughout the development lifecycle.</p>
+                        <p>I’m a Junior DevSecOps engineer focused on containers, automation, and secure systems.
+                            I’m continuously learning and applying best practices to build reliable and secure workflows.</p>
                         <p>I am open to full-time on-site, hybrid, or remote positions within international or EU-based teams. Feel free to reach out to discuss potential collaboration.</p>
                     </div>
                     <div className={styles.contactMethods}>
