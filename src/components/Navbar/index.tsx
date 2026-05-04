@@ -14,6 +14,8 @@ export function Nav(): JSX.Element {
         let lastScrollY = window.scrollY;
 
         const handleScroll = () => {
+            if (Math.abs(window.scrollY - lastScrollY) < 160) return;
+
             if (window.scrollY > lastScrollY) {
                 // scroll down
                 setIsVisible(false);
