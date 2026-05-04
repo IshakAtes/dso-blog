@@ -1,17 +1,40 @@
 import { JSX } from 'react';
 import styles from './navbar.module.css'
 import './../../css/custom.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export function Nav(): JSX.Element {
+    const [isVisible, setIsVisible] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
-
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
+
+    useEffect(() => {
+        let lastScrollY = window.scrollY;
+
+        const handleScroll = () => {
+            if (window.scrollY > lastScrollY) {
+                // scroll down
+                setIsVisible(false);
+            } else {
+                // scroll up
+                setIsVisible(true);
+            }
+
+            lastScrollY = window.scrollY;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
   return (
     <section className={styles.sectionBackground}>
-        <div className={`${styles.navbar} globalPadding`}>
+        <div className={`${styles.navbar} globalPadding ${!isVisible ? styles.hide : ''}`}>
             <a href="./" className={styles.logo}>
                 <img src="img/ishak_logo.png" alt="" />
                 <span>AI</span>
@@ -41,7 +64,7 @@ export function Nav(): JSX.Element {
             </ul>
         </div>
 
-        <div className={styles.mobileNav}>
+        <div className={`${styles.mobileNav} ${!isVisible ? styles.hide : ''}`}>
             <a href="./" className={styles.logo}>
                 <img src="img/ishak_logo.png" alt="" />
                 <span>AI</span>
