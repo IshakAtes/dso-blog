@@ -60,11 +60,11 @@ const Skills = () => {
       name: 'Yaml',
       image: 'img/skillLogos/yaml.png',
       content: [
-        'Configuration management with Yaml files',
         'A Kubernetes deployment',
         'Store settings like database connections',
         'Environment-specific variables',
         'Complex data structures represent lists and maps',
+        'Configuration management with Yaml files',
       ]
     },
     {
@@ -186,7 +186,13 @@ const Skills = () => {
                         src={skill.image}
                         alt={skill.name}
                       />
-                      <span>{skill.name}</span>
+                      <span>
+                        {skill.name === 'Static site generator'
+                          ? 'Static site'
+                          : skill.name === 'CI/CD with GitHub Actions'
+                          ? 'CI/CD'
+                          : skill.name}
+                      </span>
                     </div>
 
                     <ul className={styles.mobileSkillList}>
