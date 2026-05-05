@@ -1,5 +1,6 @@
 .skillsSection {
   background-color: #1b1b1d;
+  overflow: hidden;
 }
 
 .skillsContainer {
@@ -122,6 +123,93 @@
 }
 
 
+/* Mobile Styles */
+.mobileSkillsContainer {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    user-select: none;
+}
+
+.slide {
+    background-color: #266AD91A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 450px;
+    border-radius: 30px;
+    padding: 16px 12px;
+    gap: 16px;
+}
+
+.mobileSkillCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skillsMobileContainer {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skillsMobileContainer .skillMobileImage {
+    width: 100%;
+    height: auto;
+}
+
+.mobileSkillList {
+    width: 320px;
+}
+
+.carousel {
+  width: 100%;
+  user-select: none;
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cccccccb;
+  cursor: pointer;
+}
+
+.activeDot {
+  width: 18px;
+  border-radius: 50px;
+  background: #ffffff;
+}
+
 
 /* Media-Queries */
 @media (min-width: 2000px) {
@@ -174,6 +262,14 @@
     .skillCard {
         width: 100%;
         max-width: 370px;
+    }
+
+    .skillsContainer {
+        display: none;
+    }
+
+    .mobileSkillsContainer {
+        display: flex;
     }
 
 }
