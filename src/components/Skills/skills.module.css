@@ -141,7 +141,7 @@
 }
 
 .skillsMobileContainer {
-    width: 40px;
+    width: 52px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -149,7 +149,7 @@
     gap: 8px;
 }
 
-.skillsMobileContainer .skillMobileImage {
+.skillMobileImage {
     width: 100%;
     height: auto;
     min-height: 40px;
@@ -174,7 +174,7 @@
     color: #fff;
     font-weight: 400;
     font-size: 16px;
-    line-height: 112%;
+    line-height: 120%;
     letter-spacing: 0%;
 }
 
@@ -198,10 +198,10 @@
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 400px;
+    height: -webkit-fill-available;
     border-radius: 30px;
     padding: 16px 12px;
-    gap: 16px;
+    gap: 24px;
     min-width: 100%;
 }
 
@@ -293,9 +293,24 @@
 
 
 @media (max-width: 460px) {
-    .skillList li {
+    /* .slide {
+        padding: 12px 8px;
+    } */
+
+    .skillsMobileContainer {
+        width: 40px;
+    }
+
+    .skillMobileImage {
+        object-fit: contain;
+    }
+
+    .mobileSkillList {
+        width: 180px;
+    }
+
+    .mobileSkillList li {
         font-size: 12px;
-        line-height: unset;
         margin-bottom: 0px;
     }
 

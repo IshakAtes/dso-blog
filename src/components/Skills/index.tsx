@@ -31,10 +31,10 @@ const Skills = () => {
       name: 'Static site generator',
       image: 'img/skillLogos/docusaur.png',
       content: [
-        'Static site generation with Docusaurus',
         'search functionality',
         'static website and customization',
         'tags, categories, and RSS feeds',
+        'translation',
       ]
     },
     { name: 'Python',
@@ -159,8 +159,6 @@ const Skills = () => {
           onPointerUp={(e) => {
             const diff = startX.current - e.clientX;
 
-            console.log("Pointer diff:", diff);
-
             if (diff > 30 && currentIndex < groupedSkills.length - 1) {
               setCurrentIndex((prev) => prev + 1);
             }
@@ -173,7 +171,7 @@ const Skills = () => {
           <div
             className={styles.carouselTrack}
             style={{
-              transform: `translateX(-${currentIndex * 100}%)`,
+              transform: `translateX(-${currentIndex * 104}%)`,
             }}
           >
             {groupedSkills.map((group, groupIndex) => (
