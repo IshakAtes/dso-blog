@@ -190,6 +190,35 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Mobile-View */}
+            <div className={`${styles.mobileProjects} globalPadding`}>
+                <h2 className={styles.projectsTitle}>My project highlights</h2>
+                <div className={styles.projectsContainer}>
+                    <div className={styles.mobileProjectCard}>
+                        <h2>{selectedProject.name}</h2>
+                        <div className={styles.skillCardContainer}>
+                            {selectedProject.skills.map((skill, index) => (
+                                <div className={styles.skillCard} key={index}>
+                                    <img src={skill.image} alt={skill.skillname} />
+                                    <span>{skill.skillname}</span>
+                                </div>
+                            ))}
+                        </div>
+                        <img src={selectedProject.image} alt={selectedProject.name} />
+                        <span className={styles.description}>{selectedProject.description}</span>
+                        <div className={styles.buttonContainer}>
+                            <a href={selectedProject.links.documentation} className={styles.btn2} rel="noopener noreferrer">
+                                Documentation
+                            </a>
+                            <a href={selectedProject.links.github} className={styles.btn3} target='blank' rel="noopener noreferrer">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
     );
 }
