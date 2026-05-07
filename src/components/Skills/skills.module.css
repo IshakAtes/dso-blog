@@ -98,8 +98,8 @@
 }
 
 .skillList li {
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: 16px;
+    line-height: 1.2;
     margin-bottom: 8px;
     position: relative;
     padding-left: 20px;
@@ -293,12 +293,18 @@
 
 
 @media (max-width: 460px) {
-    /* .slide {
-        padding: 12px 8px;
-    } */
+    .slide {
+        padding-left: 24px;
+    }
+
+    .mobileSkillCard {
+        width: 100%;
+        justify-content: space-between;
+    }
 
     .skillsMobileContainer {
         width: 40px;
+        min-width: 40px;
     }
 
     .skillMobileImage {
@@ -306,11 +312,11 @@
     }
 
     .mobileSkillList {
-        width: 180px;
+        width: 100%;
     }
 
     .mobileSkillList li {
-        font-size: 12px;
+        font-size: 16px;
         margin-bottom: 0px;
     }
 

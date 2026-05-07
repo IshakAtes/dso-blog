@@ -171,7 +171,7 @@ const Skills = () => {
           <div
             className={styles.carouselTrack}
             style={{
-              transform: `translateX(-${currentIndex * 104}%)`,
+              transform: `translateX(-${currentIndex * 103}%)`,
             }}
           >
             {groupedSkills.map((group, groupIndex) => (
