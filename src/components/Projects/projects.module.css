@@ -194,6 +194,7 @@
     align-items: center;
     gap: 8px;
     cursor: pointer;
+    margin-top: 32px;
 }
 
 .seeMore span {
@@ -321,11 +322,14 @@
         display: none;
     }
 
+    .projectsTitle {
+        margin-bottom: 32px;
+    }
+
     .mobileProjects {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 32px;
         padding-top: 100px;
         padding-bottom: 100px;
     }
@@ -350,7 +354,7 @@
         width: 100%;
     }
 
-    .mobileProjectCard h2 {
+    .mobileProjectCard h3 {
         font-weight: 700;
         font-size: 32px;
         line-height: 120%;
@@ -359,12 +363,51 @@
         color: #fff;
     }
 
+    .skillCard img{
+        height: 40px;
+        width: auto;
+        object-fit: contain;
+    }
+
     .mobileProjectCard img {
         width: 100%;
     }
 
+    .description {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: 0%;
+        color: #fff;
+    }
+
+    .buttonContainer {
+        width: 100%;
+        gap: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .projectsTitle {
+        font-weight: Bold;
+        font-size: 48px;
+    }
+
+}
+
+
+
+
+@media (max-width: 480px) {
+    /* .mobileProjectCard {
+        left: -24px;
+        padding-left: 14px;
+        padding-right: 14px;
+    } */
+
     .skillCard img{
-        height: 40px;
+        height: 32px;
         width: auto;
         object-fit: contain;
     }
@@ -390,7 +433,23 @@
         font-size: 48px;
     }
 
-    /* .projectCard {
+    .buttonContainer {
+        gap: 10px;
+    }
+
+    .btn2 {
+        font-size: 16px;
+        line-height: 120%;
+        padding: 12px 14px;
+    }
+
+    .btn3 {
+        font-size: 16px;
+        line-height: 120%;
+        padding: 12px 14px;
+    }
+
+    /* .mobileProjectCard {
         left: -24px;
         gap: 16px;
         padding-left: 24px;
@@ -425,18 +484,6 @@
         align-items: center;
     }
 
-    .buttonContainer {
-        gap: 10px;
-    }
-
-    .btn2 {
-        line-height: 120%;
-        padding: 12px 16px;
-    }
-
-    .btn3 {
-        line-height: 120%;
-        padding: 12px 16px;
-    } */
+    */
 
 }

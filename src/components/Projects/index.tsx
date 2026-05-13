@@ -210,7 +210,7 @@ const Projects = () => {
                     .filter(project => project.best === true)
                     .map((project, index) => (
                         <div className={styles.mobileProjectCard} key={index}>
-                            <h2>{index + 1}. {project.name}</h2>
+                            <h3>{index + 1}. {project.name}</h3>
                             <div className={styles.skillCardContainer}>
                                 {project.skills.map((skill, index) => (
                                     <div className={styles.skillCard} key={index}>
@@ -239,7 +239,7 @@ const Projects = () => {
                         .filter(project => project.best === false)
                         .map((project, index) => (
                             <div className={styles.mobileProjectCard} key={index}>
-                                <h2>{index + 4}. {project.name}</h2>
+                                <h3>{index + 4}. {project.name}</h3>
                                 <div className={styles.skillCardContainer}>
                                     {project.skills.map((skill, index) => (
                                         <div className={styles.skillCard} key={index}>
@@ -265,7 +265,7 @@ const Projects = () => {
                 <div className={styles.seeMore} onClick={() => setShowOtherProjects(!showOtherProjects)}>
                     <img className={styles.defaultArrow} src="img/arrow.png" alt="arrow" />
                     <img className={styles.hoverArrow} src="img/hoverArrow.png" alt="hover arrow" />
-                    <span><u>{showOtherProjects ? 'Close Other Projects' : 'See More Projects'}</u></span>
+                    <span><u>{showOtherProjects ? 'close Projects' : 'See More Projects'}</u></span>
                 </div>
             </div>
         </section>
