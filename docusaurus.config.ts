@@ -47,6 +47,7 @@ const config: Config = {
             'https://github.com/IshakAtes/dso-blog',
           exclude: [
             'knowledge-base/**', // Schließt den ganzen Ordner aus
+            'guides/**',
             '**/_*.{js,jsx,ts,tsx,md,mdx}', // Standard-Excludes beibehalten
           ],
         },
