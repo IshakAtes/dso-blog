@@ -277,6 +277,10 @@
         width: 260px;
     }
 
+    .contentContainer span {
+        padding-left: 24px;
+    }
+
 }
 
 @media (max-width: 1200px) {
@@ -286,21 +290,29 @@
 
     .projectCardsContainer {
         position: relative;
+        width: 100%;
     }
 
     .projectCard {
-        width: 100vw;
-        left: -54px;
+        width: 100%;
         right: 0;
         position: relative;
         padding: 32px;
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 32px;
+        padding-right: 32px;
     }
 
     .bodyContainer img {
         max-width: 100%;
         width: unset;
+    }
+
+    .contentContainer {
+        width: 520px;
+    }
+
+    .contentContainer span {
+        padding-left: 24px;
     }
 
     .projectsSection {
