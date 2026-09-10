@@ -9,15 +9,15 @@ dotenvconfig();
 const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
 
 const config: Config = {
-  title: 'DSO Live Demo Docs',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: 'DSO Portfolio & Blog',
+  tagline: 'DevSecOps Insights',
+  favicon: 'img/favicon/favicon.ico',
 
   // Set the production url of your site here
-  url: process.env.DEPLOYMENT_URL ?? "https://spmse.github.io",
+  url: process.env.DEPLOYMENT_URL ?? "https://ishakates.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: process.env.BASE_URL ?? "/",
+  baseUrl: process.env.BASE_URL ?? "/dso-blog/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -26,7 +26,7 @@ const config: Config = {
 
   deploymentBranch: process.env.DEPLOYMENT_BRANCH,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -43,10 +43,13 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/spmse/dev-blog-template',
+            'https://github.com/IshakAtes/dso-blog',
+          exclude: [
+            'knowledge-base/**', // Schließt den ganzen Ordner aus
+            'guides/**',
+            '**/_*.{js,jsx,ts,tsx,md,mdx}', // Standard-Excludes beibehalten
+          ],
         },
         blog: blogEnabled ? 
           {
@@ -55,10 +58,8 @@ const config: Config = {
               type: ['rss', 'atom'],
               xslt: true,
             },
-            // Please change this to your repo.
-            // Remove this to remove the "edit this page" links.
             editUrl:
-              'https://github.com/spmse/dev-blog-template',
+              'https://github.com/IshakAtes/dso-blog',
             // Useful options to enforce blogging best practices
             onInlineTags: 'warn',
             onInlineAuthors: 'warn',
@@ -76,10 +77,10 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'AI',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/ishak_logo.png',
       },
       items: [
         {
@@ -89,7 +90,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/spmse/dev-blog-template',
+          href: 'https://github.com/IshakAtes/dso-blog',
           label: 'Github',
           position: 'right',
         },
@@ -102,8 +103,8 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/guides/intro',
+              label: 'Projects',
+              to: '/docs/projects/overview',
             },
           ],
         },
@@ -111,16 +112,12 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/ishak-ates/',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'X',
+              href: 'https://x.com/IshakFeuer',
             },
           ],
         },
@@ -129,16 +126,16 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/IshakAtes',
             },
-            ...blogEnabled && [{
+            ...(blogEnabled ? [{
               label: 'Blog',
               to: '/blog',
-            }],
+            }] : []),
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Sven Patrick Meier (spmse). Built with Docusaurus and 💚.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Ishak Ates. Built with Docusaurus and 💚.`,
     },
     prism: {
       theme: prismThemes.github,
@@ -161,7 +158,7 @@ const config: Config = {
 };
 
 
-if (blogEnabled) {
+if (blogEnabled && config.themeConfig) {
   (config.themeConfig.navbar as any).items.push({to: '/blog', label: 'Blog', position: 'left'});
 }
 

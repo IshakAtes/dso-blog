@@ -1,0 +1,30 @@
+h1, h2, h3 {
+    color: var(--ifm-color-primary);
+}
+
+.legalNoticeSection {
+    background-color: var(--dso-color-background);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.headerContainer h1 {
+    margin: 0;
+}
+
+.close {
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.close:hover {
+    opacity: 1;
+}

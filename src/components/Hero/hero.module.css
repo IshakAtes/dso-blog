@@ -1,0 +1,179 @@
+.hero {
+  background-color: #266AD9;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.heroTextContainer {
+    max-width: 840px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.heroImageContainer {
+  max-width: 500px;
+}
+
+.heroName {
+    font-size: 88px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.greetText {
+    font-weight: 400;
+    line-height: 120%;
+    font-size: 32px;
+    display: flex;
+    color: #fff;
+}
+
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave 2s ease-in-out 0s infinite normal none running;
+}
+
+@keyframes wave {
+  0%, 60%, 100% {
+    transform: rotate(0deg);
+  }
+  10%, 30% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+.role {
+  font-weight: 500;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.aboutMe {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 120%;
+  color: #fff;
+}
+
+.btn1 {
+  width: fit-content;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 120%;
+  background-color: white;
+  color: #266AD9;
+  border: none;
+  padding: 12px 24px;
+  gap: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.btn1:hover {
+  margin-bottom: 0px;
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+  background-color: #266AD9;
+  border: 1px solid #fff;
+}
+
+.heroImage {
+  border-radius: 30px;
+}
+
+.highlight {
+  color: var(--ifm-color-primary);
+}
+
+.heroImageMobile {
+  display: none;
+}
+
+
+
+/* Media-Queries */
+@media (min-width: 2000px) {
+  .container {
+    width: 100%;
+    max-width: 2000px;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+  }
+}
+
+@media (max-width: 1800px) {
+  .heroTextContainer {
+      max-width: 640px;
+      gap: 20px;
+  }
+
+}
+
+
+@media (max-width: 1200px) {
+  .heroImageContainer {
+    display: none;
+  }
+
+  .heroImageMobile {
+    display: block;
+    border-radius: 30px;
+    max-width: 300px;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .container {
+    height: unset;
+    justify-content: center;
+    padding-bottom: 100px;
+  }
+
+  .heroTextContainer {
+    align-items: center;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .greetText {
+      font-size: 24px;
+  }
+
+  .heroName {
+      font-size: 48px;
+  }
+
+  .role {
+    font-size: 24px;
+    margin-bottom: 0px;
+  }
+
+  .aboutMe {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+}
