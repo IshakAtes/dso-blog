@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './hero.module.css';
 import './../../css/custom.css';
@@ -90,13 +90,47 @@ const Hero = () => {
   const redirectingUrl = useBaseUrl('/redirecting');
   const glitchStyle = { '--glitch-img': `url(${heroImgUrl})` } as CSSProperties;
 
+  // "DevSecOps" and "Frontend" are two stacked, always-present layers -
+  // CSS :hover drives one long varied timeline (like the hero image's own
+  // multi-stage cycle) instead of a JS interval repeating one identical
+  // action, which is what made it feel fake/looped too tightly.
+  const roleWordRef = useRef<HTMLSpanElement>(null);
+  const [roleWidth, setRoleWidth] = useState<number | undefined>(undefined);
+
+  useEffect(() => {
+    if (roleWordRef.current) {
+      setRoleWidth(roleWordRef.current.offsetWidth);
+    }
+  }, []);
+
   return (
     <section id="hero-section" className={styles.hero}>
       <div className={`${styles.container} globalPadding`}>
         <div className={styles.heroTextContainer}>
             <span className={styles.greetText}>Hey there. <span className={styles.wave}>👋</span> I am</span>
             <h1 className={styles.heroName}>Ishak Ates</h1>
-            <span className={styles.role}>DevSecOps Engineer</span>
+            <span className={styles.role}>
+              <a
+                className={styles.roleGlitchLink}
+                href={redirectingUrl}
+                aria-label="Also a Frontend Engineer - visit ishakates.com"
+              >
+                <span
+                  className={styles.roleGlitchWord}
+                  style={roleWidth ? { width: `${roleWidth}px` } : undefined}
+                >
+                  <span ref={roleWordRef} className={`${styles.roleWord} ${styles.roleWordPrimary}`}>
+                    DevSecOps
+                  </span>
+                  <span className={`${styles.roleWord} ${styles.roleWordAlt}`}>Frontend</span>
+                  <span className={styles.roleStreaks} aria-hidden="true">
+                    <span className={`${styles.roleStreak} ${styles.roleStreak1}`} />
+                    <span className={`${styles.roleStreak} ${styles.roleStreak2}`} />
+                    <span className={`${styles.roleStreak} ${styles.roleStreak3}`} />
+                  </span>
+                </span>
+              </a> Engineer
+            </span>
 
             {/* Mobile view */}
             <a
