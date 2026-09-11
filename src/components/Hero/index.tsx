@@ -1,20 +1,10 @@
-import type { CSSProperties, MouseEvent } from 'react';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import type { CSSProperties } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './hero.module.css';
 import './../../css/custom.css';
 
 const PIXELATE_RESOLUTION = { width: 44, height: 60 };
-const REDIRECT_URL = 'https://ishakates.com';
-const MATRIX_CHARS = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン0123456789';
-
-type DestructStage = 'idle' | 'destruct' | 'matrix' | 'reboot';
-
-const STAGE_DURATIONS: Record<Exclude<DestructStage, 'idle'>, number> = {
-  destruct: 1300,
-  matrix: 2200,
-  reboot: 1500,
-};
 
 const GlitchStreaks = () => (
   <span className={styles.glitchStreaks} aria-hidden="true">
@@ -81,69 +71,6 @@ const GlitchBackdoorTag = () => (
   </span>
 );
 
-const MatrixRain = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas?.getContext('2d');
-    if (!canvas || !ctx) return;
-
-    const fontSize = 18;
-    let columns = 0;
-    let drops: number[] = [];
-
-    const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      columns = Math.ceil(canvas.width / fontSize);
-      drops = new Array(columns).fill(0).map(() => Math.random() * -50);
-    };
-    resize();
-    window.addEventListener('resize', resize);
-
-    let frameId: number;
-    const draw = () => {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.font = `${fontSize}px monospace`;
-      drops.forEach((y, i) => {
-        const char = MATRIX_CHARS[Math.floor(Math.random() * MATRIX_CHARS.length)];
-        ctx.fillStyle = Math.random() > 0.95 ? '#c8ffe0' : '#00ff6a';
-        ctx.fillText(char, i * fontSize, y * fontSize);
-        if (y * fontSize > canvas.height && Math.random() > 0.975) {
-          drops[i] = 0;
-        } else {
-          drops[i] = y + 1;
-        }
-      });
-      frameId = requestAnimationFrame(draw);
-    };
-    frameId = requestAnimationFrame(draw);
-
-    return () => {
-      cancelAnimationFrame(frameId);
-      window.removeEventListener('resize', resize);
-    };
-  }, []);
-
-  return <canvas ref={canvasRef} className={styles.matrixCanvas} />;
-};
-
-const SelfDestructOverlay = ({ stage }: { stage: DestructStage }) => {
-  if (stage === 'idle') return null;
-
-  return (
-    <div className={styles.selfDestructOverlay} role="presentation">
-      {stage === 'destruct' && (
-        <span className={styles.selfDestructText}>SELF-DESTRUCT</span>
-      )}
-      {stage === 'matrix' && <MatrixRain />}
-      {stage === 'reboot' && <span className={styles.rebootText}>SERVER REBOOT</span>}
-    </div>
-  );
-};
-
 const GlitchErrorText = () => (
   <span className={styles.glitchErrorText} aria-hidden="true">
     <span className={`${styles.errorLabel} ${styles.errorLabelBig}`}>404</span>
@@ -156,28 +83,24 @@ const GlitchErrorText = () => (
 
 const Hero = () => {
   const heroImgUrl = useBaseUrl('img/heroIshak.jpg');
+  // A plain same-tab link to our own /redirecting page - it plays the
+  // self-destruct/matrix/reboot sequence there and redirects itself
+  // afterwards, so there's never a window.open() call for a browser to
+  // block as a popup.
+  const redirectingUrl = useBaseUrl('/redirecting');
   const glitchStyle = { '--glitch-img': `url(${heroImgUrl})` } as CSSProperties;
-  const [destructStage, setDestructStage] = useState<DestructStage>('idle');
+
+  // "DevSecOps" and "Frontend" are two stacked, always-present layers -
+  // CSS :hover drives one long varied timeline (like the hero image's own
+  // multi-stage cycle) instead of a JS interval repeating one identical
+  // action, which is what made it feel fake/looped too tightly.
+  const roleWordRef = useRef<HTMLSpanElement>(null);
+  const [roleWidth, setRoleWidth] = useState<number | undefined>(undefined);
 
   useEffect(() => {
-    if (destructStage === 'idle') return undefined;
-
-    if (destructStage === 'reboot') {
-      const timer = window.setTimeout(() => {
-        window.open(REDIRECT_URL, '_blank', 'noopener,noreferrer');
-        setDestructStage('idle');
-      }, STAGE_DURATIONS.reboot);
-      return () => window.clearTimeout(timer);
+    if (roleWordRef.current) {
+      setRoleWidth(roleWordRef.current.offsetWidth);
     }
-
-    const nextStage: DestructStage = destructStage === 'destruct' ? 'matrix' : 'reboot';
-    const timer = window.setTimeout(() => setDestructStage(nextStage), STAGE_DURATIONS[destructStage]);
-    return () => window.clearTimeout(timer);
-  }, [destructStage]);
-
-  const handleGlitchClick = useCallback((event: MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    setDestructStage((current) => (current === 'idle' ? 'destruct' : current));
   }, []);
 
   return (
@@ -186,17 +109,35 @@ const Hero = () => {
         <div className={styles.heroTextContainer}>
             <span className={styles.greetText}>Hey there. <span className={styles.wave}>👋</span> I am</span>
             <h1 className={styles.heroName}>Ishak Ates</h1>
-            <span className={styles.role}>DevSecOps Engineer</span>
+            <span className={styles.role}>
+              <a
+                className={styles.roleGlitchLink}
+                href={redirectingUrl}
+                aria-label="Also a Frontend Engineer - visit ishakates.com"
+              >
+                <span
+                  className={styles.roleGlitchWord}
+                  style={roleWidth ? { width: `${roleWidth}px` } : undefined}
+                >
+                  <span ref={roleWordRef} className={`${styles.roleWord} ${styles.roleWordPrimary}`}>
+                    DevSecOps
+                  </span>
+                  <span className={`${styles.roleWord} ${styles.roleWordAlt}`}>Frontend</span>
+                  <span className={styles.roleStreaks} aria-hidden="true">
+                    <span className={`${styles.roleStreak} ${styles.roleStreak1}`} />
+                    <span className={`${styles.roleStreak} ${styles.roleStreak2}`} />
+                    <span className={`${styles.roleStreak} ${styles.roleStreak3}`} />
+                  </span>
+                </span>
+              </a> Engineer
+            </span>
 
             {/* Mobile view */}
             <a
               className={styles.glitchWrapper}
               style={glitchStyle}
-              href="https://ishakates.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={redirectingUrl}
               aria-label="Visit ishakates.com"
-              onClick={handleGlitchClick}
             >
               <GlitchStreaks />
               <GlitchTear style={glitchStyle} />
@@ -219,11 +160,8 @@ const Hero = () => {
             <a
               className={styles.glitchWrapper}
               style={glitchStyle}
-              href="https://ishakates.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={redirectingUrl}
               aria-label="Visit ishakates.com"
-              onClick={handleGlitchClick}
             >
               <GlitchStreaks />
               <GlitchTear style={glitchStyle} />
@@ -239,7 +177,6 @@ const Hero = () => {
         </div>
 
       </div>
-      <SelfDestructOverlay stage={destructStage} />
     </section>
   );
 };
