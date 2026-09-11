@@ -101,6 +101,420 @@
   border-radius: 30px;
 }
 
+/* Glitch hover effect - simulated "hacker attack" screen corruption */
+.glitchWrapper {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.glitchClip {
+  position: relative;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.glitchClip::before,
+.glitchClip::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0px, rgba(0, 0, 0, 0.45) 1px, transparent 1px, transparent 3px),
+    var(--glitch-img);
+  background-size: 100% 100%, cover;
+  background-position: center, center;
+  background-blend-mode: multiply, multiply;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.glitchClip::before {
+  background-color: #ff2d95;
+}
+
+.glitchClip::after {
+  background-color: #00faff;
+}
+
+.glitchClip img {
+  position: relative;
+  transition: filter 0.15s ease;
+}
+
+/* One shared 3.4s timeline for every glitch element: a tear burst (0-18%),
+   a black-screen "signal lost" beat with error codes (19-26%), a pixelation
+   burst (29-44%), then ~1.9s of total calm (44-100%) before it repeats - so
+   it reads as three distinct failures and a breather, not one identical
+   animation looping forever. */
+.glitchWrapper:hover .glitchClip img {
+  animation: glitchJitter 3.4s steps(1, end) infinite, glitchCoreFade 3.4s steps(1, end) infinite;
+}
+
+.glitchWrapper:hover .glitchClip::before {
+  animation: glitchShiftRed 3.4s steps(1, end) infinite;
+}
+
+.glitchWrapper:hover .glitchClip::after {
+  animation: glitchShiftCyan 3.4s steps(1, end) infinite;
+}
+
+/* Base image: calm except for two short corruption bursts per cycle */
+@keyframes glitchJitter {
+  0%   { transform: translate(0, 0) skew(0deg); filter: none; }
+  3%   { transform: translate(-3px, 1px) skew(-1deg); filter: contrast(1.3) saturate(0.5); }
+  7%   { transform: translate(2px, -1px) skew(1deg); filter: none; }
+  12%  { transform: translate(0, 0); filter: invert(1) contrast(1.8); }
+  16%  { transform: translate(-2px, 1px) skew(-1deg); filter: none; }
+  18%  { transform: translate(0, 0) skew(0deg); filter: none; }
+  32%  { transform: translate(3px, -2px) skew(2deg); filter: contrast(1.4) saturate(0.4); }
+  36%  { transform: translate(-3px, 1px) skew(-2deg); filter: none; }
+  40%  { transform: translate(0, 0); filter: hue-rotate(150deg) saturate(2); }
+  43%  { transform: translate(2px, -1px) skew(1deg); filter: none; }
+  44%  { transform: translate(0, 0) skew(0deg); filter: none; }
+}
+
+/* Base image dims during each burst's peak so the overlay effects read clearly */
+@keyframes glitchCoreFade {
+  0%  { opacity: 1; }
+  9%  { opacity: 0.3; }
+  14% { opacity: 1; }
+  35% { opacity: 0.45; }
+  40% { opacity: 1; }
+}
+
+/* Red channel ghost: active only during the tear and pixelation bursts */
+@keyframes glitchShiftRed {
+  0%   { opacity: 0; }
+  2%   { opacity: 0.7; transform: translate(-10px, 3px); clip-path: inset(8% 0 60% 0); }
+  8%   { opacity: 0.45; transform: translate(9px, -3px); clip-path: inset(52% 0 16% 0); }
+  14%  { opacity: 0.75; transform: translate(-8px, 5px); clip-path: inset(28% 0 42% 0); }
+  18%  { opacity: 0; }
+  31%  { opacity: 0.6; transform: translate(11px, -5px); clip-path: inset(60% 0 10% 0); }
+  37%  { opacity: 0.4; transform: translate(-9px, 4px); clip-path: inset(20% 0 55% 0); }
+  42%  { opacity: 0.7; transform: translate(10px, -3px); clip-path: inset(45% 0 25% 0); }
+  44%  { opacity: 0; }
+}
+
+/* Cyan channel ghost: opposite offsets, desynced timing for chaotic overlap */
+@keyframes glitchShiftCyan {
+  0%   { opacity: 0; }
+  3%   { opacity: 0.65; transform: translate(9px, -4px); clip-path: inset(58% 0 14% 0); }
+  9%   { opacity: 0.4; transform: translate(-11px, 3px); clip-path: inset(16% 0 56% 0); }
+  15%  { opacity: 0.7; transform: translate(8px, 4px); clip-path: inset(40% 0 30% 0); }
+  18%  { opacity: 0; }
+  32%  { opacity: 0.55; transform: translate(-10px, -3px); clip-path: inset(12% 0 62% 0); }
+  38%  { opacity: 0.35; transform: translate(9px, 5px); clip-path: inset(48% 0 20% 0); }
+  43%  { opacity: 0.65; transform: translate(-8px, -4px); clip-path: inset(25% 0 48% 0); }
+  44%  { opacity: 0; }
+}
+
+/* Burst 1 - torn slices: full copies of the photo, each cropped to a
+   horizontal band, that fly apart past the image's own border - like the
+   picture is physically ripping apart. */
+.glitchTear {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.tearSlice {
+  position: absolute;
+  inset: 0;
+  background-image: var(--glitch-img);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  border-radius: 30px;
+  animation-duration: 3.4s;
+  animation-timing-function: steps(1, end);
+  animation-iteration-count: infinite;
+}
+
+.tearSlice1 { clip-path: inset(0%   0 80% 0); }
+.tearSlice2 { clip-path: inset(20%  0 60% 0); }
+.tearSlice3 { clip-path: inset(40%  0 40% 0); }
+.tearSlice4 { clip-path: inset(60%  0 20% 0); }
+.tearSlice5 { clip-path: inset(80%  0 0%  0); }
+
+.glitchWrapper:hover .tearSlice1 { animation-name: tearSlice1; animation-delay: 0s; }
+.glitchWrapper:hover .tearSlice2 { animation-name: tearSlice2; animation-delay: -0.02s; }
+.glitchWrapper:hover .tearSlice3 { animation-name: tearSlice3; animation-delay: -0.04s; }
+.glitchWrapper:hover .tearSlice4 { animation-name: tearSlice4; animation-delay: -0.06s; }
+.glitchWrapper:hover .tearSlice5 { animation-name: tearSlice5; animation-delay: -0.08s; }
+
+/* Pure horizontal snaps, no rotation and no vertical drift - reads as a row
+   of the picture losing horizontal sync, like bad antenna/cable reception,
+   rather than a piece of paper physically flying off the frame. */
+@keyframes tearSlice1 {
+  0%   { opacity: 0; transform: translateX(0); }
+  3%   { opacity: 1; transform: translateX(-42px); }
+  6%   { transform: translateX(30px); }
+  8%   { transform: translateX(-18px); }
+  11%  { opacity: 0.8; transform: translateX(14px); }
+  14%  { opacity: 0; }
+}
+
+@keyframes tearSlice2 {
+  0%   { opacity: 0; transform: translateX(0); }
+  4%   { opacity: 1; transform: translateX(36px); }
+  7%   { transform: translateX(-26px); }
+  9%   { transform: translateX(20px); }
+  12%  { opacity: 0.8; transform: translateX(-10px); }
+  15%  { opacity: 0; }
+}
+
+@keyframes tearSlice3 {
+  0%   { opacity: 0; transform: translateX(0); }
+  3%   { opacity: 1; transform: translateX(-50px); }
+  6%   { transform: translateX(34px); }
+  9%   { transform: translateX(-22px); }
+  12%  { opacity: 0.8; transform: translateX(12px); }
+  15%  { opacity: 0; }
+}
+
+@keyframes tearSlice4 {
+  0%   { opacity: 0; transform: translateX(0); }
+  4%   { opacity: 1; transform: translateX(40px); }
+  7%   { transform: translateX(-30px); }
+  10%  { transform: translateX(18px); }
+  13%  { opacity: 0.8; transform: translateX(-8px); }
+  16%  { opacity: 0; }
+}
+
+@keyframes tearSlice5 {
+  0%   { opacity: 0; transform: translateX(0); }
+  3%   { opacity: 1; transform: translateX(-32px); }
+  6%   { transform: translateX(24px); }
+  9%   { transform: translateX(-16px); }
+  12%  { opacity: 0.8; transform: translateX(10px); }
+  15%  { opacity: 0; }
+}
+
+/* Burst 2 - real pixelation glitch: the whole photo drops to a chunky,
+   low-res mosaic and flickers in and out a few times, like a video feed
+   losing compression under load - a genuinely different failure mode from
+   the tear, not just another copy of the same photo moved around. */
+.glitchPixelate {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 30px;
+  opacity: 0;
+  pointer-events: none;
+  animation-duration: 3.4s;
+  animation-timing-function: steps(1, end);
+  animation-iteration-count: infinite;
+}
+
+.glitchWrapper:hover .glitchPixelate { animation-name: pixelateFlicker; }
+
+/* A canvas holding a genuinely low-res draw of the photo (see index.tsx) -
+   image-rendering: pixelated then blows that small bitmap back up to full
+   size with hard block edges, unlike a CSS background-size trick which
+   browsers may silently resample smoothly instead of blockily. */
+.pixelateCanvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  filter: contrast(1.1) saturate(1.25);
+}
+
+@keyframes pixelateFlicker {
+  0%   { opacity: 0; }
+  29%  { opacity: 0; }
+  30%  { opacity: 1; }
+  32%  { opacity: 0.2; }
+  33%  { opacity: 1; }
+  36%  { opacity: 0.15; }
+  37%  { opacity: 1; }
+  40%  { opacity: 0.3; }
+  41%  { opacity: 1; }
+  44%  { opacity: 0; }
+}
+
+/* Black-screen "signal lost" beat, between the tear and the pixelation burst */
+.glitchBlackout {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  border-radius: 30px;
+  background: #030304;
+  opacity: 0;
+  pointer-events: none;
+  animation-duration: 3.4s;
+  animation-timing-function: steps(1, end);
+  animation-iteration-count: infinite;
+}
+
+.glitchWrapper:hover .glitchBlackout { animation-name: blackoutFlicker; }
+
+@keyframes blackoutFlicker {
+  0%   { opacity: 0; }
+  19%  { opacity: 0; }
+  20%  { opacity: 1; }
+  21%  { opacity: 0.75; }
+  22%  { opacity: 1; }
+  26%  { opacity: 0; }
+}
+
+/* Small pixel-block streaks that fly outside the image edges - one pop per burst */
+.glitchStreaks {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.streak {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  animation-duration: 3.4s;
+  animation-timing-function: steps(1, end);
+  animation-iteration-count: infinite;
+}
+
+.streak1 { top: 12%;  left: -34px;  width: 34px; height: 7px;  background: #ff2d95; }
+.streak2 { top: 28%;  right: -46px; width: 46px; height: 9px;  background: #00faff; }
+.streak3 { top: 46%;  left: -54px;  width: 54px; height: 8px;  background: #5dffb0; }
+.streak4 { top: 62%;  right: -30px; width: 30px; height: 6px;  background: #ff2d95; }
+.streak5 { top: 76%;  left: -42px;  width: 42px; height: 9px;  background: #00faff; }
+.streak6 { top: 90%;  right: -38px; width: 38px; height: 6px;  background: #5dffb0; }
+
+/* Animation only runs while hovering - reverts instantly to opacity:0 otherwise */
+.glitchWrapper:hover .streak1 { animation-name: streakPopLeft;  animation-delay: -0.02s; }
+.glitchWrapper:hover .streak2 { animation-name: streakPopRight; animation-delay: -0.05s; }
+.glitchWrapper:hover .streak3 { animation-name: streakPopLeft;  animation-delay: -0.08s; }
+.glitchWrapper:hover .streak4 { animation-name: streakPopRight; animation-delay: -0.11s; }
+.glitchWrapper:hover .streak5 { animation-name: streakPopLeft;  animation-delay: -0.14s; }
+.glitchWrapper:hover .streak6 { animation-name: streakPopRight; animation-delay: -0.17s; }
+
+@keyframes streakPopLeft {
+  0%   { opacity: 0; transform: translateX(0) scaleX(1); }
+  6%   { opacity: 0.9; transform: translateX(-8px) scaleX(1.3); }
+  11%  { opacity: 0.5; transform: translateX(-3px) scaleX(0.85); }
+  15%  { opacity: 0; }
+  30%  { opacity: 0.9; transform: translateX(-8px) scaleX(1.3); }
+  37%  { opacity: 0.5; transform: translateX(-3px) scaleX(0.85); }
+  42%  { opacity: 0; }
+}
+
+@keyframes streakPopRight {
+  0%   { opacity: 0; transform: translateX(0) scaleX(1); }
+  6%   { opacity: 0.9; transform: translateX(8px) scaleX(1.3); }
+  11%  { opacity: 0.5; transform: translateX(3px) scaleX(0.85); }
+  15%  { opacity: 0; }
+  30%  { opacity: 0.9; transform: translateX(8px) scaleX(1.3); }
+  37%  { opacity: 0.5; transform: translateX(3px) scaleX(0.85); }
+  42%  { opacity: 0; }
+}
+
+/* Error/terminal text: only appears during the black "signal lost" beat,
+   like a dead feed throwing up its error codes - a big centered 404 plus a
+   few smaller ERROR tags scattered around it. */
+.glitchErrorText {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.errorLabel {
+  position: absolute;
+  opacity: 0;
+  white-space: nowrap;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+  animation-duration: 3.4s;
+  animation-timing-function: steps(1, end);
+  animation-iteration-count: infinite;
+}
+
+.errorLabelBig {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(34px, 9vw, 64px);
+  letter-spacing: 4px;
+}
+
+.errorLabel1 {
+  top: 14%;
+  left: 8%;
+  font-size: clamp(12px, 2.8vw, 17px);
+}
+
+.errorLabel3 {
+  bottom: 12%;
+  right: 8%;
+  font-size: clamp(12px, 2.8vw, 17px);
+}
+
+.errorLabel4 {
+  top: 16%;
+  right: 10%;
+  font-size: clamp(12px, 2.8vw, 17px);
+}
+
+.errorLabel5 {
+  top: 62%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(15px, 3.4vw, 21px);
+}
+
+.glitchWrapper:hover .errorLabelBig { animation-name: errorFlashBig; }
+.glitchWrapper:hover .errorLabel1   { animation-name: errorFlashSmall; animation-delay: -0.03s; }
+.glitchWrapper:hover .errorLabel3   { animation-name: errorFlashSmall; animation-delay: -0.06s; }
+.glitchWrapper:hover .errorLabel4   { animation-name: errorFlashSmall; animation-delay: -0.09s; }
+.glitchWrapper:hover .errorLabel5   { animation-name: errorFlashSmallCentered; animation-delay: -0.04s; }
+
+/* The headline: appears as the screen goes black and holds for the beat */
+@keyframes errorFlashBig {
+  0%   { opacity: 0; }
+  19%  { opacity: 0; }
+  20%  { opacity: 1; transform: translate(-50%, -50%) skewX(-3deg); }
+  21%  { opacity: 0.5; transform: translate(-50%, -50%) skewX(2deg); }
+  22%  { opacity: 1; transform: translate(-50%, -50%) skewX(0deg); }
+  25%  { opacity: 1; }
+  26%  { opacity: 0; }
+}
+
+/* The scattered ERROR tags: quick flickers around the headline */
+@keyframes errorFlashSmall {
+  0%   { opacity: 0; }
+  20%  { opacity: 0; }
+  21%  { opacity: 1; transform: translateX(-3px); }
+  22%  { opacity: 0.2; }
+  24%  { opacity: 1; transform: translateX(2px); }
+  26%  { opacity: 0; }
+}
+
+/* Same flicker as errorFlashSmall, but keeps the horizontal centering transform */
+@keyframes errorFlashSmallCentered {
+  0%   { opacity: 0; }
+  20%  { opacity: 0; }
+  21%  { opacity: 1; transform: translateX(calc(-50% - 3px)); }
+  22%  { opacity: 0.2; }
+  24%  { opacity: 1; transform: translateX(calc(-50% + 2px)); }
+  26%  { opacity: 0; }
+}
+
 .highlight {
   color: var(--ifm-color-primary);
 }
