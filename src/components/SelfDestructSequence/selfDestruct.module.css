@@ -1,0 +1,45 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.matrixCanvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Shared look for every text stage - only the color changes per stage */
+.stageText {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: clamp(22px, 4.4vw, 42px);
+  text-align: center;
+  padding: 0 24px;
+  animation: cursorBlink 1s steps(1, end) infinite;
+}
+
+.alertColor {
+  color: #ff1414;
+  text-shadow: 0 0 12px rgba(255, 20, 20, 0.9), 0 0 36px rgba(255, 20, 20, 0.55);
+}
+
+.grantedColor {
+  color: #5dffb0;
+  text-shadow: 0 0 12px rgba(93, 255, 176, 0.85);
+}
+
+@keyframes cursorBlink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
