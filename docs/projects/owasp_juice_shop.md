@@ -39,21 +39,39 @@ Do not attempt to apply these techniques on any system without explicit authoriz
 - **Description:** Submitted more than 10 feedback entries within 20 seconds by bypassing the CAPTCHA validation (e.g., reusing a valid solution or disabling the check).
 - **Risk:** Allows attackers to flood the system with automated requests, perform spam attacks, or degrade system availability. 
 - **Report:** [CAPTCHA Bypass – Pentest Report](https://github.com/IshakAtes/owasp_juice_shop/blob/6763e339f70e03c7b93921a9c8998b3075146951/3-Star%20Challenges/report-01-CAPTCHA-Bypass.md)
-- **Video:** [CAPTCHA Bypass – Video Walkthrough](https://go.screenpal.com/watch/cTQV6Anoexj)  
+- **Video:** [CAPTCHA Bypass – Video Walkthrough](https://pentest.ishakates.com/CAPTCHA_Video.mp4)
+<video controls width="100%">
+  <source
+    src="https://pentest.ishakates.com/CAPTCHA_Video.mp4"
+    type="video/mp4"
+  />
+</video>
 
 ### 2. Cross-Site Scripting (XSS)
 - **Category:** XSS (Cross-Site Scripting)  
 - **Description:** Injected malicious JavaScript into the system that was executed when the Admin accessed the dashboard.
 - **Risk:** Can compromise administrative accounts, leading to privilege escalation, full application takeover, or injection of further malicious payloads. 
 - **Report:** [Cross-Site Scripting – Pentest Report](https://github.com/IshakAtes/owasp_juice_shop/blob/6763e339f70e03c7b93921a9c8998b3075146951/3-Star%20Challenges/report-02-ClientSide-XSS-Protection.md)
-- **Video:** [Cross-Site Scripting – Video Walkthrough](https://go.screenpal.com/watch/cTQf6Hno25D)
+- **Video:** [Cross-Site Scripting – Video Walkthrough](https://pentest.ishakates.com/Client-side%20XSS%20Protection.mp4)
+<video controls width="100%">
+  <source
+    src="https://pentest.ishakates.com/Client-side%20XSS%20Protection.mp4"
+    type="video/mp4"
+  />
+</video>
 
 ### 3. Forged Review - Review Manipulation (Broken Access Control)
 - **Category:** Broken Access Control  
 - **Description:** While logged in as Jim, submitted a new product review but modified the `author` field so that it appeared under another user’s name.  
 - **Risk:** Attackers can impersonate other users, damage reputations, and undermine trust in the integrity of user-generated content.
 - **Report:** [Review Manipulation – Pentest Report](https://github.com/IshakAtes/owasp_juice_shop/blob/1e67f59cb8035f66174743965cb203810c37e6f7/3-Star%20Challenges/report-03-ForgedReview.md)
-- **Video:** [Review Manipulation – Video Walkthrough](https://go.screenpal.com/watch/cTQerdnolNC)  
+- **Video:** [Review Manipulation – Video Walkthrough](https://pentest.ishakates.com/ForgedReview.mp4)
+<video controls width="100%">
+  <source
+    src="https://pentest.ishakates.com/ForgedReview.mp4"
+    type="video/mp4"
+  />
+</video>
   
 
 ---
